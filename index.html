@@ -1,1207 +1,1553 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Radhika Construction & Surveying | Jabalpur</title>
-
-<meta name="description" content="Radhika Construction & Surveying - Civil Engineering, Surveying, Planning, Mapping and Construction Consultancy services in Jabalpur, Madhya Pradesh.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'DM Sans',sans-serif;
-    background:#f5f1e9;
-    color:#25241f;
-    line-height:1.6;
-}
-
-h1,h2,h3,h4{
-    font-family:'Manrope',sans-serif;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(32,35,30,.96);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.navbar{
-    max-width:1250px;
-    margin:auto;
-    padding:16px 25px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo-area img{
-    width:52px;
-    height:52px;
-    object-fit:contain;
-    border-radius:10px;
-    background:#fff;
-    padding:4px;
-}
-
-.logo-text{
-    color:#fff;
-}
-
-.logo-text strong{
-    display:block;
-    font-family:'Manrope',sans-serif;
-    font-size:17px;
-    letter-spacing:.3px;
-}
-
-.logo-text span{
-    color:#c5a66d;
-    font-size:11px;
-    letter-spacing:1.5px;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:27px;
-}
-
-nav a{
-    color:#eee;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#d2b477;
-}
-
-.nav-btn{
-    padding:10px 18px;
-    border:1px solid #c5a66d;
-    border-radius:30px;
-    color:#e3c889!important;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:650px;
-    position:relative;
-    overflow:hidden;
-    background:#20231e;
-    display:flex;
-    align-items:center;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-    linear-gradient(90deg,
-    rgba(20,22,19,.98) 0%,
-    rgba(20,22,19,.90) 38%,
-    rgba(20,22,19,.35) 75%,
-    rgba(20,22,19,.25) 100%);
-    z-index:1;
-}
-
-.hero-photo{
-    position:absolute;
-    right:0;
-    top:0;
-    width:55%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
-    opacity:.88;
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:1250px;
-    width:100%;
-    margin:auto;
-    padding:80px 25px;
-}
-
-.hero-small{
-    color:#d2b477;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:18px;
-}
-
-.hero h1{
-    color:#fff;
-    font-size:clamp(42px,6vw,78px);
-    line-height:1.02;
-    max-width:650px;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:#d2b477;
-}
-
-.hero p{
-    color:#d7d7d2;
-    max-width:590px;
-    font-size:17px;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 24px;
-    border-radius:6px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#c5a66d;
-    color:#20231e;
-}
-
-.btn-primary:hover{
-    background:#e0c78f;
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.5);
-    color:#fff;
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:#20231e;
-}
-
-/* ================= GENERAL ================= */
-
-.section{
-    max-width:1250px;
-    margin:auto;
-    padding:95px 25px;
-}
-
-.section-label{
-    color:#8c6c37;
-    text-transform:uppercase;
-    letter-spacing:2.5px;
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:12px;
-}
-
-.section-title{
-    font-size:clamp(32px,4vw,50px);
-    line-height:1.1;
-    margin-bottom:20px;
-    color:#25241f;
-}
-
-.section-intro{
-    color:#66645d;
-    max-width:700px;
-    font-size:16px;
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-    background:#eee7da;
-}
-
-.about-grid{
-    max-width:1250px;
-    margin:auto;
-    padding:90px 25px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about-image{
-    position:relative;
-    min-height:460px;
-    overflow:hidden;
-    border-radius:8px;
-    background:#292c26;
-}
-
-.about-image img{
-    width:100%;
-    height:100%;
-    min-height:460px;
-    object-fit:cover;
-}
-
-.about-image::after{
-    content:"";
-    position:absolute;
-    inset:15px;
-    border:1px solid rgba(255,255,255,.4);
-    pointer-events:none;
-}
-
-.about-content p{
-    color:#626059;
-    margin-bottom:18px;
-}
-
-.highlight{
-    border-left:3px solid #b28b4d;
-    padding:15px 20px;
-    margin-top:25px;
-    background:rgba(255,255,255,.4);
-}
-
-/* ================= SERVICES ================= */
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-    margin-top:45px;
-}
-
-.service-card{
-    background:#fff;
-    border:1px solid #e4ded2;
-    border-radius:8px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(42,38,29,.12);
-}
-
-.service-image{
-    height:210px;
-    overflow:hidden;
-}
-
-.service-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.service-card:hover .service-image img{
-    transform:scale(1.05);
-}
-
-.service-content{
-    padding:23px;
-}
-
-.service-number{
-    color:#a17d43;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-}
-
-.service-content h3{
-    margin:8px 0;
-    font-size:21px;
-}
-
-.service-content p{
-    color:#69675f;
-    font-size:14px;
-}
-
-/* ================= WORK ================= */
-
-.work{
-    background:#20231e;
-}
-
-.work .section-title{
-    color:#fff;
-}
-
-.work .section-intro{
-    color:#bdbdb5;
-}
-
-.gallery{
-    margin-top:45px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-}
-
-.gallery-item{
-    height:280px;
-    overflow:hidden;
-    border-radius:7px;
-    position:relative;
-    background:#30332d;
-}
-
-.gallery-item.large{
-    height:420px;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.06);
-}
-
-.gallery-item::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent 55%,rgba(0,0,0,.35));
-    pointer-events:none;
-}
-
-/* ================= TECHNOLOGY ================= */
-
-.tech{
-    background:#eee7da;
-}
-
-.tech-grid{
-    margin-top:40px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.tech-card{
-    background:#fff;
-    border:1px solid #ded7ca;
-    padding:28px 22px;
-    border-radius:8px;
-}
-
-.tech-card .icon{
-    font-size:30px;
-    margin-bottom:15px;
-}
-
-.tech-card h3{
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-.tech-card p{
-    color:#68665f;
-    font-size:14px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:#282b25;
-    color:#fff;
-}
-
-.contact-grid{
-    max-width:1250px;
-    margin:auto;
-    padding:90px 25px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-}
-
-.contact .section-label{
-    color:#d2b477;
-}
-
-.contact .section-title{
-    color:#fff;
-}
-
-.contact-text{
-    color:#c4c5bd;
-    max-width:570px;
-    margin-bottom:30px;
-}
-
-.contact-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-.info-box{
-    border:1px solid rgba(255,255,255,.13);
-    padding:20px;
-    border-radius:7px;
-    background:rgba(255,255,255,.035);
-}
-
-.info-box small{
-    display:block;
-    color:#c5a66d;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    font-size:10px;
-    font-weight:800;
-    margin-bottom:5px;
-}
-
-.info-box p,
-.info-box a{
-    color:#eee;
-    font-size:15px;
-}
-
-/* ================= LEGAL ================= */
-
-.legal{
-    background:#191b18;
-    color:#aeb0a8;
-    padding:30px 25px;
-    text-align:center;
-    font-size:12px;
-}
-
-.legal strong{
-    color:#d1bd92;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#121411;
-    color:#777a73;
-    text-align:center;
-    padding:22px;
-    font-size:12px;
-}
-
-footer span{
-    color:#c5a66d;
-}
-
-/* ================= MOBILE ================= */
-
-.menu-toggle{
-    display:none;
-    color:white;
-    font-size:27px;
-    cursor:pointer;
-}
-
-@media(max-width:900px){
-
-    nav{
-        display:none;
-        position:absolute;
-        top:85px;
-        left:0;
-        right:0;
-        background:#20231e;
-        flex-direction:column;
-        padding:25px;
-        gap:20px;
-        border-top:1px solid rgba(255,255,255,.1);
-    }
-
-    nav.active{
-        display:flex;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .hero{
-        min-height:700px;
-    }
-
-    .hero-photo{
-        width:100%;
-        opacity:.28;
-    }
-
-    .hero::before{
-        background:rgba(20,22,19,.72);
-    }
-
-    .hero-content{
-        padding:80px 25px;
-    }
-
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .tech-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:600px){
-
-    .navbar{
-        padding:12px 18px;
-    }
-
-    .logo-area img{
-        width:44px;
-        height:44px;
-    }
-
-    .logo-text strong{
-        font-size:14px;
-    }
-
-    .logo-text span{
-        font-size:9px;
-    }
-
-    .hero{
-        min-height:650px;
-    }
-
-    .hero h1{
-        font-size:44px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .section,
-    .about-grid,
-    .contact-grid{
-        padding:65px 20px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .tech-grid{
-        grid-template-columns:1fr;
-    }
-
-    .gallery{
-        grid-template-columns:1fr 1fr;
-        gap:8px;
-    }
-
-    .gallery-item,
-    .gallery-item.large{
-        height:190px;
-    }
-
-    .gallery-item:first-child{
-        grid-column:span 2;
-        height:260px;
-    }
-
-    .contact-grid{
-        gap:35px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Radhika Construction & Surveying | Jabalpur</title>
+
+    <meta name="description"
+          content="Radhika Construction & Surveying provides construction, surveying, mapping, planning and documentation services in Jabalpur, Madhya Pradesh.">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f7f7f7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 15px 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.20);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .logo-text h2 {
+            font-size: 20px;
+            color: #f59e0b;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.62),
+                    rgba(0,0,0,0.62)
+                ),
+                url("image%3A%20field-survey-team.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #f59e0b;
+        }
+
+        .hero p {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            background: #f59e0b;
+            color: #111;
+
+            padding: 13px 28px;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            margin: 5px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #d97706;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #111;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 6%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .about-content h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+            font-weight: bold;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #f59e0b;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: #f3f4f6;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 230px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            color: #666;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why-us {
+            background: #111827;
+            color: white;
+        }
+
+        .why-us .section-title h2 {
+            color: white;
+        }
+
+        .why-us .section-title p {
+            color: #d1d5db;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            text-align: center;
+
+            padding: 25px;
+
+            border: 1px solid #374151;
+
+            border-radius: 10px;
+        }
+
+        .why-card .number {
+            font-size: 35px;
+
+            color: #f59e0b;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #d1d5db;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #f3f4f6;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-box {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box h3 {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+
+            color: #111827;
+
+            margin-bottom: 5px;
+        }
+
+        .contact-item span {
+            color: #666;
+        }
+
+        .contact-item a {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: #f59e0b;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1120;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .service-grid,
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 12px 4%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .logo-area {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .logo-area img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo-text h2 {
+                font-size: 16px;
+            }
+
+            .logo-text p {
+                font-size: 10px;
+            }
+
+            nav {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .service-grid,
+            .project-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card img {
+                height: 250px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
 
-<header>
-<div class="navbar">
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-    <a href="#home" class="logo-area">
-        <img src="logo.png" alt="Radhika Construction & Surveying Logo">
-        <div class="logo-text">
-            <strong>Radhika Construction</strong>
-            <span>& SURVEYING</span>
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo-area">
+
+                <img
+                    src="logo.png"
+                    alt="Radhika Construction Logo"
+                >
+
+                <div class="logo-text">
+
+                    <h2>
+                        Radhika Construction
+                    </h2>
+
+                    <p>
+                        Construction & Surveying | Jabalpur
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#projects">Projects</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
         </div>
-    </a>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav id="nav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
-        <a href="#technology">Technology</a>
-        <a href="#contact" class="nav-btn">Contact</a>
-    </nav>
-
-</div>
-</header>
+    </header>
 
 
-<!-- ================= HERO ================= -->
 
-<section class="hero" id="home">
+    <!-- =========================
+         HERO
+    ========================= -->
 
-    <img
-        class="hero-photo"
-        src="father photo.jpeg"
-        alt="Er. Vivek Kumar Nema">
+    <section class="hero" id="home">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <div class="hero-small">
-            Civil Engineering • Surveying • Planning
-        </div>
+            <h1>
+                Radhika
+                <span>Construction</span>
+                & Surveying
+            </h1>
 
-        <h1>
-            Building with<br>
-            <span>Precision.</span>
-        </h1>
+            <p>
+                Professional Construction, Surveying,
+                Mapping & Legal Documentation Services
+            </p>
 
-        <p>
-            Radhika Construction & Surveying provides professional
-            civil engineering, surveying, mapping, planning and
-            construction consultancy services.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#services" class="btn btn-primary">
-                Explore Services
+            <a
+                href="#services"
+                class="btn"
+            >
+                Explore Our Services
             </a>
 
-            <a href="#contact" class="btn btn-outline">
+            <a
+                href="#contact"
+                class="btn btn-outline"
+            >
                 Contact Us
             </a>
+
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ================= ABOUT ================= -->
 
-<section class="about" id="about">
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-<div class="about-grid">
+    <section class="about" id="about">
 
-    <div class="about-image">
-        <img
-            src="field-survey-team.jpg"
-            alt="Surveying and field work">
-    </div>
+        <div class="container">
 
-    <div class="about-content">
+            <div class="section-title">
 
-        <div class="section-label">
-            About the Firm
+                <h2>
+                    About Us
+                </h2>
+
+                <p>
+                    Professional solutions for construction
+                    and surveying requirements
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-image">
+
+                    <img
+                        src="father%20photo.jpeg"
+                        alt="Radhika Construction"
+                    >
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <h3>
+                        Reliable. Professional. Experienced.
+                    </h3>
+
+                    <p>
+                        Radhika Construction & Surveying is a
+                        professional construction and surveying
+                        service provider based in Jabalpur,
+                        Madhya Pradesh.
+                    </p>
+
+                    <p>
+                        We provide practical and reliable
+                        solutions for construction-related
+                        requirements, land surveying, mapping,
+                        planning and documentation.
+                    </p>
+
+                    <p>
+                        Our focus is on accuracy, professional
+                        service, transparent communication
+                        and quality work.
+                    </p>
+
+
+                    <ul class="about-list">
+
+                        <li>
+                            Professional Surveying Services
+                        </li>
+
+                        <li>
+                            Construction Planning & Support
+                        </li>
+
+                        <li>
+                            Land & Site Mapping
+                        </li>
+
+                        <li>
+                            Residential Planning & Design
+                        </li>
+
+                        <li>
+                            Legal Documentation Support
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <h2 class="section-title">
-            Experience meets<br>modern surveying.
-        </h2>
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section
+        class="services"
+        id="services"
+    >
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Our Services
+                </h2>
+
+                <p>
+                    Complete solutions for construction,
+                    surveying and planning
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📐
+                    </div>
+
+                    <h3>
+                        Land Surveying
+                    </h3>
+
+                    <p>
+                        Accurate land measurement and
+                        professional site surveying services.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🗺️
+                    </div>
+
+                    <h3>
+                        Mapping Services
+                    </h3>
+
+                    <p>
+                        Detailed maps and site mapping for
+                        planning and development requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🏗️
+                    </div>
+
+                    <h3>
+                        Construction Support
+                    </h3>
+
+                    <p>
+                        Construction-related planning and
+                        professional project support.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🏠
+                    </div>
+
+                    <h3>
+                        Residential Design
+                    </h3>
+
+                    <p>
+                        Residential planning and design
+                        solutions according to project
+                        requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🚁
+                    </div>
+
+                    <h3>
+                        Drone Mapping
+                    </h3>
+
+                    <p>
+                        Modern aerial mapping and surveying
+                        solutions for large and complex sites.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Legal Documentation
+                    </h3>
+
+                    <p>
+                        Professional assistance with
+                        construction, land and project
+                        documentation.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section
+        class="projects"
+        id="projects"
+    >
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Our Work
+                </h2>
+
+                <p>
+                    Examples of surveying, mapping and
+                    construction-related work
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+
+                <!-- FIELD SURVEY TEAM -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20field-survey-team.jpg"
+                        alt="Field Survey Team"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Field Survey Team
+                        </h3>
+
+                        <p>
+                            Professional field surveying
+                            and site measurement work.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GREEN BUILDING -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20green-building.jpg"
+                        alt="Green Building"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Green Building
+                        </h3>
+
+                        <p>
+                            Sustainable and modern
+                            construction planning solutions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LAND USE MAP -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20landuse-map.jpg"
+                        alt="Land Use Map"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Land Use Mapping
+                        </h3>
+
+                        <p>
+                            Detailed land-use mapping for
+                            planning and development.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MAP -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20map.jpg"
+                        alt="Survey Map"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Survey Mapping
+                        </h3>
+
+                        <p>
+                            Accurate maps prepared for
+                            surveying and planning requirements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESIDENTIAL DESIGN -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20residential-design.jpg"
+                        alt="Residential Design"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Residential Design
+                        </h3>
+
+                        <p>
+                            Planning and design solutions
+                            for residential projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ROAD MAP -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20road-map.jpg"
+                        alt="Road Map"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Road Mapping
+                        </h3>
+
+                        <p>
+                            Road mapping and planning
+                            support for development projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STP PROPOSAL -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20stp-proposal.jpg"
+                        alt="STP Proposal"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            STP Proposal
+                        </h3>
+
+                        <p>
+                            Planning and documentation
+                            support for sewage treatment projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SURVEYING FIELD -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20surveying-field.jpg"
+                        alt="Surveying Field"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Field Surveying
+                        </h3>
+
+                        <p>
+                            Professional site inspection,
+                            measurement and surveying.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TEMPLE SITE -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3A%20temple-site.jpg"
+                        alt="Temple Site"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Temple Site
+                        </h3>
+
+                        <p>
+                            Site surveying and planning
+                            support for development projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DRONE MAPPING -->
+
+                <div class="project-card">
+
+                    <img
+                        src="image%3Adrone-mapping.jpg"
+                        alt="Drone Mapping"
+                    >
+
+                    <div class="project-info">
+
+                        <h3>
+                            Drone Mapping
+                        </h3>
+
+                        <p>
+                            Aerial surveying and modern
+                            drone mapping solutions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================= -->
+
+    <section class="why-us">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Why Choose Us
+                </h2>
+
+                <p>
+                    Professional service focused on
+                    accuracy and reliability
+                </p>
+
+            </div>
+
+
+            <div class="why-grid">
+
+
+                <div class="why-card">
+
+                    <div class="number">
+                        01
+                    </div>
+
+                    <h3>
+                        Accuracy
+                    </h3>
+
+                    <p>
+                        Careful surveying and documentation
+                        with attention to detail.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="number">
+                        02
+                    </div>
+
+                    <h3>
+                        Professional Service
+                    </h3>
+
+                    <p>
+                        Practical solutions tailored to
+                        individual project requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="number">
+                        03
+                    </div>
+
+                    <h3>
+                        Modern Technology
+                    </h3>
+
+                    <p>
+                        Use of modern mapping and surveying
+                        techniques where appropriate.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="number">
+                        04
+                    </div>
+
+                    <h3>
+                        Reliable Support
+                    </h3>
+
+                    <p>
+                        Clear communication and dependable
+                        project support.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section
+        class="contact"
+        id="contact"
+    >
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <p>
+                    Get in touch with Radhika Construction
+                    & Surveying
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <!-- BUSINESS INFORMATION -->
+
+                <div class="contact-box">
+
+                    <h3>
+                        Business Information
+                    </h3>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Company
+                        </strong>
+
+                        <span>
+                            Radhika Construction & Surveying
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Jabalpur, Madhya Pradesh, India
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span>
+
+                            <a href="tel:+919424394299">
+                                9424394299
+                            </a>
+
+                            <br>
+
+                            <a href="tel:+919131197196">
+                                9131197196
+                            </a>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span>
+
+                            <a href="mailto:radhikaconstructions07@gmail.com">
+                                radhikaconstructions07@gmail.com
+                            </a>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Services
+                        </strong>
+
+                        <span>
+                            Construction, Surveying, Mapping,
+                            Planning & Documentation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT ACTIONS -->
+
+                <div class="contact-box">
+
+                    <h3>
+                        Let's Work Together
+                    </h3>
+
+                    <p
+                        style="
+                        color:#666;
+                        margin-bottom:25px;
+                        "
+                    >
+                        Have a construction, surveying,
+                        mapping or documentation requirement?
+
+                        Contact us to discuss your project.
+                    </p>
+
+
+                    <a
+                        href="tel:+919424394299"
+                        class="btn"
+                    >
+                        📞 Call 9424394299
+                    </a>
+
+
+                    <a
+                        href="tel:+919131197196"
+                        class="btn"
+                    >
+                        📞 Call 9131197196
+                    </a>
+
+
+                    <a
+                        href="mailto:radhikaconstructions07@gmail.com"
+                        class="btn"
+                    >
+                        ✉ Email Us
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            Radhika Construction & Surveying
+        </h3>
 
         <p>
-            Radhika Construction & Surveying is a Jabalpur-based
-            civil engineering and surveying consultancy working
-            across residential, commercial and infrastructure
-            requirements.
+            Professional Construction & Surveying Services
         </p>
 
-        <p>
-            The firm combines practical civil engineering experience
-            with modern surveying, mapping and digital technologies
-            to support accurate planning and execution.
+        <p style="margin-top:10px;">
+            © 2026 Radhika Construction & Surveying.
+            All Rights Reserved.
         </p>
 
-        <div class="highlight">
-            <strong>Er. Vivek Kumar Nema</strong><br>
-            Civil Engineer, Planner & Consultant
-        </div>
+    </footer>
 
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section class="section" id="services">
-
-    <div class="section-label">
-        What We Do
-    </div>
-
-    <h2 class="section-title">
-        Professional Services
-    </h2>
-
-    <p class="section-intro">
-        A range of civil engineering, surveying, mapping and
-        planning services designed for residential, commercial
-        and infrastructure requirements.
-    </p>
-
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="service-image">
-                <img src="drone-mapping.jpg" alt="Drone mapping">
-            </div>
-            <div class="service-content">
-                <span class="service-number">01</span>
-                <h3>Drone & Digital Mapping</h3>
-                <p>
-                    Digital mapping and aerial survey solutions
-                    for accurate site information and planning.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="service-card">
-            <div class="service-image">
-                <img src="surveying-field.jpg" alt="Land surveying">
-            </div>
-            <div class="service-content">
-                <span class="service-number">02</span>
-                <h3>Land Surveying</h3>
-                <p>
-                    Field surveying, boundary surveys, land
-                    measurements and site documentation.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="service-card">
-            <div class="service-image">
-                <img src="map.jpg" alt="Mapping services">
-            </div>
-            <div class="service-content">
-                <span class="service-number">03</span>
-                <h3>Mapping & Planning</h3>
-                <p>
-                    Site plans, maps, digital documentation and
-                    planning support for different requirements.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="service-card">
-            <div class="service-image">
-                <img src="road-map.jpg" alt="Road planning">
-            </div>
-            <div class="service-content">
-                <span class="service-number">04</span>
-                <h3>Road & Infrastructure</h3>
-                <p>
-                    Surveying and planning support for roads,
-                    housing projects and infrastructure works.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="service-card">
-            <div class="service-image">
-                <img src="landuse-map.jpg" alt="Land use mapping">
-            </div>
-            <div class="service-content">
-                <span class="service-number">05</span>
-                <h3>Land Use & Site Studies</h3>
-                <p>
-                    Land-use mapping, site analysis and
-                    measurement assistance.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="service-card">
-            <div class="service-image">
-                <img src="residential-design.jpg" alt="Residential design">
-            </div>
-            <div class="service-content">
-                <span class="service-number">06</span>
-                <h3>Residential & Building Work</h3>
-                <p>
-                    Residential planning, building-related
-                    consultancy and civil work support.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= OUR WORK ================= -->
-
-<section class="work" id="work">
-
-<div class="section">
-
-    <div class="section-label">
-        Our Work
-    </div>
-
-    <h2 class="section-title">
-        Selected Work
-    </h2>
-
-    <p class="section-intro">
-        A glimpse of surveying, planning, mapping and
-        civil engineering work.
-    </p>
-
-
-    <div class="gallery">
-
-        <div class="gallery-item large">
-            <img src="field-survey-team.jpg" alt="Field survey work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="surveying-field.jpg" alt="Surveying work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="drone-mapping.jpg" alt="Drone mapping work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="map.jpg" alt="Mapping work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="road-map.jpg" alt="Road mapping work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="landuse-map.jpg" alt="Land use mapping">
-        </div>
-
-        <div class="gallery-item">
-            <img src="residential-design.jpg" alt="Residential design">
-        </div>
-
-        <div class="gallery-item">
-            <img src="stp-proposal.jpg" alt="Planning work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="green-building.jpg" alt="Building work">
-        </div>
-
-        <div class="gallery-item">
-            <img src="temple-site.jpg" alt="Site planning work">
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ================= TECHNOLOGY ================= -->
-
-<section class="tech" id="technology">
-
-<div class="section">
-
-    <div class="section-label">
-        Technology
-    </div>
-
-    <h2 class="section-title">
-        Modern Tools.<br>Accurate Results.
-    </h2>
-
-    <p class="section-intro">
-        Technology-supported surveying and mapping helps
-        improve accuracy, documentation and planning.
-    </p>
-
-
-    <div class="tech-grid">
-
-        <div class="tech-card">
-            <div class="icon">◈</div>
-            <h3>RTK Surveying</h3>
-            <p>
-                High-precision positioning for field surveying
-                and measurement requirements.
-            </p>
-        </div>
-
-        <div class="tech-card">
-            <div class="icon">⌁</div>
-            <h3>Drone Mapping</h3>
-            <p>
-                Aerial data collection and mapping for
-                site analysis and documentation.
-            </p>
-        </div>
-
-        <div class="tech-card">
-            <div class="icon">▱</div>
-            <h3>Digital Mapping</h3>
-            <p>
-                Digital maps and site information for
-                planning and project requirements.
-            </p>
-        </div>
-
-        <div class="tech-card">
-            <div class="icon">⌖</div>
-            <h3>Site Planning</h3>
-            <p>
-                Practical planning support based on
-                field measurements and site conditions.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact" id="contact">
-
-<div class="contact-grid">
-
-    <div>
-
-        <div class="section-label">
-            Get in Touch
-        </div>
-
-        <h2 class="section-title">
-            Let's discuss<br>your project.
-        </h2>
-
-        <p class="contact-text">
-            For surveying, mapping, planning, construction
-            consultancy or civil engineering requirements,
-            get in touch with us.
-        </p>
-
-        <div class="contact-buttons">
-
-            <a
-                href="tel:+919424394299"
-                class="btn btn-primary">
-                Call Now
-            </a>
-
-            <a
-                href="https://wa.me/919424394299"
-                class="btn btn-outline"
-                target="_blank">
-                WhatsApp
-            </a>
-
-            <a
-                href="mailto:viveknemajbp@gmail.com"
-                class="btn btn-outline">
-                Email
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="contact-info">
-
-        <div class="info-box">
-            <small>Principal Consultant</small>
-            <p>
-                <strong>Er. Vivek Kumar Nema</strong><br>
-                Civil Engineer, Planner & Consultant
-            </p>
-        </div>
-
-        <div class="info-box">
-            <small>Phone</small>
-            <p>
-                <a href="tel:+919424394299">
-                    +91 94243 94299
-                </a><br>
-                <a href="tel:+919131197196">
-                    +91 91311 97196
-                </a>
-            </p>
-        </div>
-
-        <div class="info-box">
-            <small>Email</small>
-            <p>
-                <a href="mailto:viveknemajbp@gmail.com">
-                    viveknemajbp@gmail.com
-                </a>
-            </p>
-        </div>
-
-        <div class="info-box">
-            <small>Office</small>
-            <p>
-                5/96, Damoh Road, Pandit Deen Dayal Chowk,
-                Vijay Nagar, Jabalpur,
-                Madhya Pradesh – 482001
-            </p>
-        </div>
-
-        <div class="info-box">
-            <small>GSTIN</small>
-            <p>23ACSPN3182G2ZE</p>
-        </div>
-
-        <div class="info-box">
-            <small>Location</small>
-            <p>
-                <a
-                    href="https://www.google.com/maps/search/?api=1&query=Pandit+Deen+Dayal+Chowk+Vijay+Nagar+Jabalpur+Madhya+Pradesh"
-                    target="_blank">
-                    View Office Location on Google Maps →
-                </a>
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ================= LEGAL ================= -->
-
-<div class="legal">
-
-    <p>
-        <strong>Terms & Conditions:</strong>
-        Services are subject to mutually agreed scope,
-        site conditions and applicable regulations.
-    </p>
-
-    <p style="margin-top:8px;">
-        Any approval, registration or statutory compliance
-        shall be subject to the applicable authority and
-        project requirements.
-    </p>
-
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    ©️ <span id="year"></span>
-    Radhika Construction & Surveying.
-    All Rights Reserved.
-
-</footer>
-
-
-<script>
-
-function toggleMenu(){
-    document.getElementById("nav").classList.toggle("active");
-}
-
-document.querySelectorAll("nav a").forEach(function(link){
-    link.addEventListener("click",function(){
-        document.getElementById("nav").classList.remove("active");
-    });
-});
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-</script>
 
 </body>
 </html>
