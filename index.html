@@ -1,2492 +1,1651 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Radhika Construction & Surveying — engineer-led land surveying, GIS, drone mapping, DGPS, total station, levelling, catchment analysis, construction and planning services in Jabalpur, Madhya Pradesh.">
 <title>Radhika Construction & Surveying | Jabalpur</title>
-
-<meta name="description"
-content="Radhika Construction & Surveying provides professional civil engineering, surveying, mapping, planning and construction consultancy services in Jabalpur, Madhya Pradesh.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-
+<link rel="icon" type="image/png" href="logo.png">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
-/* =========================================================
-   RESET
-========================================================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+:root{
+--espresso:#241D19;
+--walnut:#4A3428;
+--forest:#26352C;
+--bronze:#B08A57;
+--ivory:#F3EFE7;
+--paper:#FAF8F3;
+--ink:#27221E;
+--muted:#71685F;
+--line:rgba(74,52,40,.16);
+--shadow:0 24px 70px rgba(36,29,25,.12)
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-    font-family:"DM Sans",sans-serif;
-    background:#f5f1e9;
-    color:#25241f;
-    line-height:1.6;
+font-family:'DM Sans',sans-serif;
+color:var(--ink);
+background:var(--paper);
+line-height:1.65;
+overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{width:min(1180px,92%);margin:auto}
+
+.wall{position:relative;isolation:isolate;overflow:hidden}
+.dark-wall{
+background:radial-gradient(circle at 75% 10%,rgba(176,138,87,.13),transparent 30%),
+linear-gradient(135deg,#171310,#2b211c 52%,#1f1915)
+}
+.ivory-wall{
+background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.9),transparent 35%),
+linear-gradient(135deg,#eee9df,#faf8f3 48%,#e8e1d6)
+}
+.forest-wall{
+background:radial-gradient(circle at 85% 15%,rgba(176,138,87,.12),transparent 28%),
+linear-gradient(135deg,#18251f,#26352c 55%,#1d2b24)
 }
 
-h1,
-h2,
-h3,
-h4{
-    font-family:"Manrope",sans-serif;
+.wall:before{
+content:'';
+position:absolute;
+inset:0;
+z-index:-1;
+opacity:.45;
+background:
+radial-gradient(circle at 15% 20%,rgba(255,255,255,.11) 0 1px,transparent 1.5px),
+radial-gradient(circle at 75% 65%,rgba(255,255,255,.07) 0 1px,transparent 1.5px);
+background-size:19px 19px,27px 27px
 }
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-button{
-    font-family:inherit;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:rgba(32,35,30,.97);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(36,29,25,.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.09)
 }
 
-.navbar{
-    max-width:1250px;
-    margin:auto;
-
-    min-height:84px;
-
-    padding:14px 25px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    position:relative;
+.nav{
+height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px
 }
 
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
+.brand{
+display:flex;
+align-items:center;
+gap:13px;
+color:#fff
 }
 
-.logo-area img{
-    width:52px;
-    height:52px;
-
-    object-fit:contain;
-
-    background:#fff;
-
-    padding:4px;
-
-    border-radius:10px;
+.brand-name{
+font-family:Manrope;
+font-weight:800;
+font-size:15px
 }
 
-.logo-text{
-    color:#fff;
-}
-
-.logo-text strong{
-    display:block;
-
-    font-family:"Manrope",sans-serif;
-
-    font-size:17px;
-
-    letter-spacing:.2px;
-}
-
-.logo-text span{
-    display:block;
-
-    color:#c5a66d;
-
-    font-size:11px;
-
-    letter-spacing:1.8px;
+.brand-sub{
+font-size:10px;
+color:#cdbfae;
+letter-spacing:.18em;
+text-transform:uppercase
 }
 
 nav{
-    display:flex;
-    align-items:center;
-    gap:28px;
+display:flex;
+gap:27px;
+align-items:center
 }
 
 nav a{
-    color:#eeeeeb;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    transition:.25s;
+color:#eee8df;
+font-size:13px;
+font-weight:600
 }
 
-nav a:hover{
-    color:#d5b97e;
+nav a:hover{color:var(--bronze)}
+
+.menu{
+display:none;
+color:#fff;
+font-size:25px;
+cursor:pointer
 }
 
-.nav-btn{
-    padding:11px 20px;
-
-    border:1px solid #c5a66d;
-
-    border-radius:30px;
-
-    color:#e2c887 !important;
+.nav-right{
+display:flex;
+align-items:center;
+gap:30px
 }
 
-.menu-toggle{
-    display:none;
-
-    color:#fff;
-
-    font-size:27px;
-
-    cursor:pointer;
+.header-logo{
+display:flex;
+align-items:center
 }
 
+.header-logo img{
+height:60px;
+width:auto
+}
 
-/* =========================================================
-   HERO
-========================================================= */
+/* HERO */
 
 .hero{
-    min-height:calc(100vh - 84px);
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:#141613;
-
-    display:flex;
-    align-items:stretch;
+min-height:820px;
+padding:150px 0 90px;
+color:#fff;
+display:flex;
+align-items:center
 }
 
-
-/* RIGHT SIDE FATHER PHOTO */
-
-.hero-photo{
-    position:absolute;
-
-    top:0;
-    right:0;
-
-    width:55%;
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center top;
-
-    opacity:.9;
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:70px;
+align-items:center
 }
 
-
-/* DARK OVERLAY
-   This creates the same dark reference look
-*/
-
-.hero::before{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    z-index:1;
-
-    background:
-    linear-gradient(
-        90deg,
-        rgba(20,22,19,.99) 0%,
-        rgba(20,22,19,.98) 30%,
-        rgba(20,22,19,.91) 45%,
-        rgba(20,22,19,.58) 60%,
-        rgba(20,22,19,.18) 82%,
-        rgba(20,22,19,.12) 100%
-    );
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:10px;
+color:#d6b985;
+font-size:11px;
+letter-spacing:.22em;
+text-transform:uppercase;
+font-weight:700;
+margin-bottom:24px
 }
 
-
-/* HERO CONTENT */
-
-.hero-content{
-    position:relative;
-
-    z-index:2;
-
-    width:100%;
-
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:100px 25px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
+.eyebrow:before{
+content:'';
+width:38px;
+height:1px;
+background:var(--bronze)
 }
 
-.hero-small{
-    color:#d2b477;
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    margin-bottom:20px;
+h1{
+font-family:Manrope;
+font-size:clamp(44px,6vw,76px);
+line-height:1.04;
+letter-spacing:-.045em;
+font-weight:800;
+margin-bottom:25px
 }
 
-.hero h1{
-    color:#fff;
-
-    font-size:clamp(48px,6vw,80px);
-
-    line-height:1.01;
-
-    letter-spacing:-2.5px;
-
-    max-width:690px;
-
-    margin-bottom:27px;
-
-    font-weight:800;
-}
-
-.hero h1 span{
-    color:#d2b477;
-}
+h1 span{color:#d5b47d}
 
 .hero p{
-    color:#d8d8d3;
-
-    max-width:610px;
-
-    font-size:17px;
-
-    line-height:1.7;
-
-    margin-bottom:36px;
+max-width:620px;
+color:#d8d0c7;
+font-size:18px;
+margin-bottom:34px
 }
 
-.hero-buttons{
-    display:flex;
-
-    gap:14px;
-
-    flex-wrap:wrap;
+.actions{
+display:flex;
+gap:13px;
+flex-wrap:wrap
 }
 
 .btn{
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:14px 24px;
-
-    border-radius:6px;
-
-    font-weight:700;
-
-    transition:.25s;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:50px;
+padding:0 22px;
+border-radius:3px;
+font-weight:700;
+font-size:13px;
+transition:.25s
 }
 
 .btn-primary{
-    background:#c5a66d;
-
-    color:#20231e;
+background:var(--bronze);
+color:#fff
 }
 
 .btn-primary:hover{
-    background:#e0c78f;
-
-    transform:translateY(-2px);
+transform:translateY(-2px);
+background:#c09b67
 }
 
 .btn-outline{
-    color:#fff;
-
-    border:1px solid rgba(255,255,255,.5);
+border:1px solid rgba(255,255,255,.28);
+color:#fff
 }
 
 .btn-outline:hover{
-    background:#fff;
-
-    color:#20231e;
+border-color:var(--bronze);
+color:#e0c28f
 }
 
-
-/* small engineer information on photo */
-
-.hero-engineer{
-    position:absolute;
-
-    z-index:3;
-
-    right:35px;
-
-    bottom:35px;
-
-    background:rgba(20,22,19,.88);
-
-    border-left:3px solid #c5a66d;
-
-    padding:15px 20px;
-
-    color:#fff;
-
-    min-width:245px;
+.hero-panel{
+position:relative;
+min-height:540px;
+border:1px solid rgba(176,138,87,.35);
+background:#1a1512;
+box-shadow:0 35px 90px rgba(0,0,0,.35);
+overflow:hidden
 }
 
-.hero-engineer strong{
-    display:block;
-
-    font-size:15px;
+.hero-photo{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:50% 10%
 }
 
-.hero-engineer span{
-    display:block;
-
-    color:#c8cbc6;
-
-    font-size:12px;
-
-    margin-top:3px;
+.hero-panel:after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(23,19,16,.94) 0%,rgba(23,19,16,.55) 26%,transparent 52%)
 }
 
-   <!-- ================= PROFESSIONAL NETWORK ================= -->
-
-<section class="professional-network">
-    <div class="container network-grid">
-
-        <div class="network-content">
-
-            <div class="kicker">
-                Professional Network
-            </div>
-
-            <h2>
-                Strong connections.<br>
-                Broader perspectives.
-            </h2>
-
-            <p>
-                At Radhika Construction & Surveying, we value the
-                professional relationships built through years of
-                experience in the construction, surveying, and
-                consulting sectors.
-            </p>
-
-            <p>
-                Our network includes experienced professionals,
-                business leaders, consultants, and industry contacts
-                across India and Singapore, creating opportunities
-                for meaningful professional interaction, knowledge
-                exchange, and broader industry exposure.
-            </p>
-
-            <p>
-                We believe that strong professional connections
-                encourage continuous learning, new perspectives,
-                and the adoption of evolving practices within our
-                field.
-            </p>
-
-        </div>
-
-
-        <div class="network-card">
-
-            <div class="network-card-top">
-                PROFESSIONAL CONNECTIONS
-            </div>
-
-            <div class="network-items">
-
-                <div>
-                    <strong>India</strong>
-                    <span>Industry & Professional Network</span>
-                </div>
-
-                <div>
-                    <strong>Singapore</strong>
-                    <span>International Professional Connections</span>
-                </div>
-
-                <div>
-                    <strong>Knowledge Exchange</strong>
-                    <span>Ideas • Experience • Perspectives</span>
-                </div>
-
-                <div>
-                    <strong>Industry Exposure</strong>
-                    <span>Learning • Collaboration • Growth</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-/* =========================================================
-   GENERAL SECTION
-========================================================= */
-
-.section{
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:95px 25px;
+.coordinates{
+position:absolute;
+z-index:2;
+bottom:20px;
+left:30px;
+color:#b7afa6;
+font-size:10px;
+letter-spacing:.14em;
+font-family:monospace
 }
 
-.section-label{
-    color:#8c6c37;
-
-    text-transform:uppercase;
-
-    letter-spacing:2.5px;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    margin-bottom:12px;
+.engineer-card{
+position:absolute;
+z-index:2;
+left:30px;
+bottom:46px;
+border-left:2px solid var(--bronze);
+padding-left:14px
 }
 
-.section-title{
-    font-size:clamp(32px,4vw,50px);
-
-    line-height:1.1;
-
-    margin-bottom:20px;
-
-    color:#25241f;
+.engineer-card strong{
+display:block;
+font-family:Manrope;
+font-size:20px
 }
 
-.section-intro{
-    color:#66645d;
+.engineer-card small{color:#d2c8bc}
 
-    max-width:720px;
+/* GENERAL */
 
-    font-size:16px;
+section{padding:105px 0}
+
+.section-head{
+max-width:720px;
+margin-bottom:52px
 }
 
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about{
-    background:#eee7da;
+.kicker{
+font-size:10px;
+color:var(--bronze);
+font-weight:800;
+letter-spacing:.22em;
+text-transform:uppercase;
+margin-bottom:12px
 }
+
+h2{
+font-family:Manrope;
+font-size:clamp(32px,4vw,49px);
+line-height:1.12;
+letter-spacing:-.035em
+}
+
+.section-head p{
+color:var(--muted);
+margin-top:17px;
+font-size:16px
+}
+
+/* PROFESSIONAL NETWORK - ADDED */
+
+.professional-network{
+background:#20231e;
+color:#fff
+}
+
+.network-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center
+}
+
+.professional-network .kicker{
+color:#c5a66d
+}
+
+.professional-network h2{
+color:#fff;
+margin-bottom:28px
+}
+
+.network-content p{
+color:#c7c9c2;
+max-width:720px;
+margin-bottom:20px;
+font-size:15px;
+line-height:1.8
+}
+
+.network-card{
+background:#292c26;
+border:1px solid rgba(197,166,109,.3);
+border-radius:8px;
+padding:32px;
+position:relative;
+overflow:hidden
+}
+
+.network-card:before{
+content:"";
+position:absolute;
+width:180px;
+height:180px;
+border:1px solid rgba(197,166,109,.15);
+border-radius:50%;
+right:-65px;
+top:-65px
+}
+
+.network-card-top{
+color:#c5a66d;
+font-size:11px;
+font-weight:800;
+letter-spacing:2px;
+padding-bottom:20px;
+border-bottom:1px solid rgba(255,255,255,.1);
+margin-bottom:5px
+}
+
+.network-items{
+display:grid;
+gap:0
+}
+
+.network-items>div{
+padding:20px 0;
+border-bottom:1px solid rgba(255,255,255,.08)
+}
+
+.network-items>div:last-child{
+border-bottom:0
+}
+
+.network-items strong{
+display:block;
+color:#fff;
+font-family:"Manrope",sans-serif;
+font-size:18px;
+margin-bottom:4px
+}
+
+.network-items span{
+color:#aaaFA8;
+font-size:13px
+}
+
+/* ABOUT */
+
+.about{background:var(--ivory)}
 
 .about-grid{
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:90px 25px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:80px;
+align-items:center
 }
 
-.about-image{
-    position:relative;
-
-    min-height:470px;
-
-    overflow:hidden;
-
-    border-radius:8px;
-
-    background:#292c26;
+.statement{
+position:relative;
+padding:40px;
+background:
+linear-gradient(to top,rgba(36,29,25,.94) 0%,rgba(36,29,25,.72) 55%,rgba(36,29,25,.45) 100%),
+url('field-survey-team.jpg') center/cover no-repeat,
+var(--espresso);
+color:#fff;
+box-shadow:var(--shadow);
+min-height:460px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end
 }
 
-.about-image img{
-    width:100%;
-
-    height:100%;
-
-    min-height:470px;
-
-    object-fit:cover;
+.statement .quote{
+font-family:Manrope;
+font-size:32px;
+line-height:1.2;
+font-weight:700;
+margin-bottom:22px
 }
 
-.about-image::after{
-    content:"";
-
-    position:absolute;
-
-    inset:15px;
-
-    border:1px solid rgba(255,255,255,.4);
-
-    pointer-events:none;
+.statement p{
+color:#e2d9ce;
+font-size:14px
 }
 
-.about-content p{
-    color:#626059;
-
-    margin-bottom:18px;
+.about-copy p{
+color:#5f574f;
+margin:18px 0
 }
 
-.highlight{
-    border-left:3px solid #b28b4d;
-
-    padding:15px 20px;
-
-    margin-top:25px;
-
-    background:rgba(255,255,255,.45);
-
-    color:#3d3b34;
+.signature{
+margin-top:28px;
+padding-top:20px;
+border-top:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+gap:20px
 }
 
-.highlight strong{
-    color:#25241f;
+.signature strong{font-family:Manrope}
+.signature span{
+font-size:12px;
+color:var(--muted)
 }
 
+/* SERVICES */
 
-/* =========================================================
-   SERVICES
-========================================================= */
+.services{background:var(--paper)}
 
-.services{
-    background:#f5f1e9;
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
 }
 
-.services-grid{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:22px;
-
-    margin-top:45px;
+.card{
+position:relative;
+background:#fff;
+border:1px solid var(--line);
+transition:.3s;
+overflow:hidden;
+display:flex;
+flex-direction:column
 }
 
-.service-card{
-    background:#fff;
-
-    border:1px solid #e4ded2;
-
-    border-radius:8px;
-
-    overflow:hidden;
-
-    transition:.3s;
+.card:hover{
+transform:translateY(-6px);
+box-shadow:var(--shadow);
+border-color:rgba(176,138,87,.42)
 }
 
-.service-card:hover{
-    transform:translateY(-6px);
-
-    box-shadow:
-    0 15px 35px rgba(42,38,29,.12);
+.card-img{
+aspect-ratio:16/10;
+width:100%;
+overflow:hidden;
+background:#e7e0d5
 }
 
-.service-image{
-    height:215px;
-
-    overflow:hidden;
+.card-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .5s
 }
 
-.service-image img{
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.5s;
+.card:hover .card-img img{
+transform:scale(1.04)
 }
 
-.service-card:hover .service-image img{
-    transform:scale(1.05);
+.card-body{
+padding:26px 28px 30px
 }
 
-.service-content{
-    padding:24px;
+.num{
+font-family:monospace;
+color:var(--bronze);
+font-size:11px;
+letter-spacing:.12em
 }
 
-.service-number{
-    color:#a17d43;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
+.card h3{
+font-family:Manrope;
+font-size:19px;
+margin:14px 0 10px
 }
 
-.service-content h3{
-    margin:8px 0;
-
-    font-size:21px;
-
-    color:#292821;
+.card p{
+font-size:13px;
+color:var(--muted)
 }
 
-.service-content p{
-    color:#69675f;
-
-    font-size:14px;
+.tech-tag{
+display:inline-block;
+margin-top:19px;
+font-size:10px;
+color:var(--forest);
+font-weight:800;
+letter-spacing:.12em;
+text-transform:uppercase
 }
 
-
-/* =========================================================
-   OUR WORK
-========================================================= */
-
-.work{
-    background:#20231e;
+.card-wide{
+grid-column:1/-1;
+background:var(--espresso);
+color:#fff;
+border-color:rgba(176,138,87,.4)
 }
 
-.work .section-label{
-    color:#c5a66d;
+.card-wide .card-body{padding:31px}
+.card-wide h3{color:#fff}
+.card.card-wide p{
+color:#cfc5ba;
+max-width:760px
+}
+.card-wide .tech-tag{color:#d5b47d}
+
+/* WORK */
+
+.work{background:var(--ivory)}
+
+.work-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
 }
 
-.work .section-title{
-    color:#fff;
+.work-item{
+position:relative;
+overflow:hidden;
+background:var(--espresso);
+aspect-ratio:4/5;
+border:1px solid var(--line)
 }
 
-.work .section-intro{
-    color:#bdbdb5;
+.work-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .6s
 }
 
-.gallery{
-    margin-top:45px;
+.work-item:hover img{transform:scale(1.05)}
 
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:14px;
+.work-item figcaption{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:60px 24px 22px;
+color:#fff;
+background:linear-gradient(to top,rgba(23,19,16,.92),transparent)
 }
 
-.gallery-item{
-    height:280px;
-
-    overflow:hidden;
-
-    border-radius:7px;
-
-    position:relative;
-
-    background:#30332d;
+.work-item figcaption strong{
+display:block;
+font-family:Manrope;
+font-size:18px
 }
 
-.gallery-item.large{
-    height:420px;
-
-    grid-row:span 2;
+.work-item figcaption span{
+font-size:12px;
+color:#d2c8bc
 }
 
-.gallery-item img{
-    width:100%;
+/* TECHNOLOGY */
 
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.5s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.06);
-}
-
-.gallery-item::after{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    linear-gradient(
-        transparent 50%,
-        rgba(0,0,0,.42)
-    );
-
-    pointer-events:none;
-}
-
-.gallery-label{
-    position:absolute;
-
-    left:18px;
-    bottom:17px;
-
-    z-index:2;
-
-    color:#fff;
-
-    font-weight:700;
-
-    font-size:15px;
-}
-
-
-/* =========================================================
-   TECHNOLOGY
-========================================================= */
-
-.technology{
-    background:#eee7da;
-}
+.technology{color:#fff}
 
 .tech-grid{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:65px;
-
-    align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:65px;
+align-items:center
 }
+
+.technology .section-head p{color:#c4cec7}
 
 .tech-list{
-    margin-top:35px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:14px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px
 }
 
-.tech-card{
-    background:#fff;
-
-    border:1px solid #ded7ca;
-
-    padding:25px 20px;
-
-    border-radius:8px;
+.tech-item{
+padding:25px;
+border:1px solid rgba(255,255,255,.11);
+background:rgba(255,255,255,.045)
 }
 
-.tech-card .tech-icon{
-    color:#9b763c;
-
-    font-size:25px;
-
-    margin-bottom:9px;
+.tech-item strong{
+display:block;
+font-family:Manrope;
+font-size:17px
 }
 
-.tech-card strong{
-    display:block;
-
-    color:#282720;
-
-    font-size:17px;
-
-    margin-bottom:3px;
+.tech-item span{
+display:block;
+color:#aeb9b1;
+font-size:12px;
+margin-top:5px
 }
-
-.tech-card span{
-    color:#77736a;
-
-    font-size:13px;
-}
-
-
-/* technology visual */
 
 .tech-visual{
-    min-height:470px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:8px;
-
-    background:
-    radial-gradient(
-        circle at 50% 50%,
-        rgba(197,166,109,.16),
-        transparent 45%
-    ),
-    #20231e;
-
-    border:1px solid rgba(197,166,109,.25);
+min-height:380px;
+border:1px solid rgba(176,138,87,.28);
+position:relative;
+background:rgba(0,0,0,.12);
+overflow:hidden
 }
 
-.tech-visual::before{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background-image:
-    linear-gradient(
-        rgba(197,166,109,.12) 1px,
-        transparent 1px
-    ),
-    linear-gradient(
-        90deg,
-        rgba(197,166,109,.12) 1px,
-        transparent 1px
-    );
-
-    background-size:45px 45px;
+.gridlines{
+position:absolute;
+inset:0;
+background-image:
+linear-gradient(rgba(176,138,87,.12) 1px,transparent 1px),
+linear-gradient(90deg,rgba(176,138,87,.12) 1px,transparent 1px);
+background-size:45px 45px;
+transform:perspective(450px) rotateX(52deg) scale(1.45);
+transform-origin:center bottom
 }
 
-.tech-circle{
-    position:absolute;
-
-    width:220px;
-
-    height:220px;
-
-    border:1px solid rgba(197,166,109,.5);
-
-    border-radius:50%;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
+.map-pin{
+position:absolute;
+left:50%;
+top:45%;
+width:100px;
+height:100px;
+transform:translate(-50%,-50%) rotate(45deg);
+border:1px solid var(--bronze)
 }
 
-.tech-circle::before{
-    content:"";
-
-    position:absolute;
-
-    width:12px;
-
-    height:12px;
-
-    border-radius:50%;
-
-    background:#c5a66d;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    box-shadow:
-    0 0 0 10px rgba(197,166,109,.1),
-    0 0 0 30px rgba(197,166,109,.05);
+.map-pin:before{
+content:'';
+position:absolute;
+inset:19px;
+border:1px solid rgba(176,138,87,.7)
 }
 
-.tech-line{
-    position:absolute;
-
-    height:1px;
-
-    background:rgba(197,166,109,.45);
-
-    width:75%;
-
-    top:50%;
-
-    left:12.5%;
+.map-pin:after{
+content:'';
+position:absolute;
+width:8px;
+height:8px;
+background:var(--bronze);
+left:45px;
+top:45px;
+border-radius:50%
 }
 
-.tech-label{
-    position:absolute;
-
-    left:25px;
-
-    bottom:25px;
-
-    color:#c5a66d;
-
-    font-size:10px;
-
-    letter-spacing:2px;
+.visual-label{
+position:absolute;
+left:24px;
+bottom:22px;
+font-family:monospace;
+color:#b9a988;
+font-size:10px;
+letter-spacing:.13em
 }
 
+/* WHY */
 
-/* =========================================================
-   WHY US
-========================================================= */
-
-.why{
-    background:#f5f1e9;
-}
+.why{background:var(--ivory)}
 
 .why-grid{
-    margin-top:40px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
 }
 
 .why-item{
-    padding:30px;
-
-    background:#fff;
-
-    border:1px solid #e2dcd1;
-
-    border-radius:7px;
+padding:30px 24px;
+border-top:2px solid var(--bronze)
 }
 
 .why-item strong{
-    display:block;
-
-    font-size:19px;
-
-    margin-bottom:8px;
-
-    color:#292821;
+display:block;
+font-family:Manrope;
+font-size:18px;
+margin-bottom:10px
 }
 
 .why-item p{
-    color:#6a675f;
-
-    font-size:14px;
+font-size:13px;
+color:var(--muted)
 }
 
-
-/* =========================================================
-   CTA
-========================================================= */
+/* CTA */
 
 .cta{
-    background:#282b25;
-
-    color:#fff;
+padding:90px 0;
+background:var(--walnut);
+color:#fff
 }
 
 .cta-inner{
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:80px 25px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px
 }
 
-.cta .section-label{
-    color:#d2b477;
-}
-
-.cta h2{
-    font-size:clamp(32px,4vw,48px);
-
-    line-height:1.1;
-
-    max-width:750px;
-
-    margin-bottom:12px;
-}
+.cta h2{max-width:690px}
 
 .cta p{
-    color:#c4c5bd;
-
-    max-width:650px;
+color:#d7cbc0;
+margin-top:12px
 }
 
+/* CONTACT */
 
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact{
-    background:#eee7da;
-}
+.contact{background:var(--paper)}
 
 .contact-grid{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    margin-top:30px;
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:70px
 }
 
 .contact-info{
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
+padding:34px;
+background:#fff;
+border:1px solid var(--line)
 }
 
 .contact-row{
-    background:#fff;
-
-    border:1px solid #ded8cd;
-
-    border-radius:7px;
-
-    padding:20px;
+padding:19px 0;
+border-bottom:1px solid var(--line)
 }
+
+.contact-row:last-child{border-bottom:0}
 
 .contact-row small{
-    display:block;
-
-    color:#a17d43;
-
-    text-transform:uppercase;
-
-    letter-spacing:1.5px;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    margin-bottom:6px;
+display:block;
+color:var(--bronze);
+font-size:9px;
+font-weight:800;
+letter-spacing:.18em;
+text-transform:uppercase;
+margin-bottom:4px
 }
 
-.contact-row span,
-.contact-row a{
-    color:#34332c;
-
-    font-size:15px;
+.contact-row a,
+.contact-row span{
+font-size:14px
 }
 
-.contact-row a:hover{
-    color:#98723a;
+.contact-row a:hover{color:var(--bronze)}
+
+.map-box{
+min-height:370px;
+background:
+linear-gradient(rgba(36,29,25,.08),rgba(36,29,25,.08)),
+repeating-linear-gradient(0deg,transparent 0 38px,rgba(74,52,40,.07) 39px 40px),
+repeating-linear-gradient(90deg,transparent 0 38px,rgba(74,52,40,.07) 39px 40px),
+#e7e0d5;
+border:1px solid var(--line);
+display:flex;
+align-items:center;
+justify-content:center
 }
 
-
-/* CONTACT CARD */
-
-.contact-card{
-    background:#20231e;
-
-    color:#fff;
-
-    border-radius:8px;
-
-    padding:40px;
-
-    min-height:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
+.map-card{
+background:rgba(250,248,243,.94);
+padding:32px;
+max-width:430px;
+text-align:center;
+box-shadow:var(--shadow)
 }
 
-.contact-card .section-label{
-    color:#c5a66d;
+.map-card h3{
+font-family:Manrope;
+font-size:22px;
+margin-bottom:9px
 }
 
-.contact-card h3{
-    font-size:31px;
-
-    line-height:1.2;
-
-    margin-bottom:15px;
+.map-card p{
+font-size:13px;
+color:var(--muted);
+margin-bottom:20px
 }
 
-.contact-card p{
-    color:#c3c6c0;
-
-    margin-bottom:25px;
-}
-
-.gstin{
-    margin-top:25px;
-
-    padding-top:22px;
-
-    border-top:1px solid rgba(255,255,255,.12);
-}
-
-.gstin small{
-    display:block;
-
-    color:#c5a66d;
-
-    font-size:10px;
-
-    letter-spacing:1.5px;
-
-    text-transform:uppercase;
-}
-
-.gstin strong{
-    color:#fff;
-
-    font-size:18px;
-}
-
-
-/* =========================================================
-   LEGAL
-========================================================= */
-
-.legal{
-    background:#191b18;
-
-    color:#aeb0a8;
-
-    padding:28px 25px;
-
-    text-align:center;
-
-    font-size:12px;
-}
-
-.legal strong{
-    color:#d1bd92;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 footer{
-    background:#121411;
-
-    color:#777a73;
-
-    padding:50px 25px 20px;
+background:#171310;
+color:#d9d0c7;
+padding:55px 0 25px
 }
 
 .footer-grid{
-    max-width:1250px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1.4fr 1fr 1fr;
-
-    gap:50px;
-
-    padding-bottom:35px;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+display:grid;
+grid-template-columns:1.2fr .8fr .8fr;
+gap:50px
 }
 
-.footer-column h3{
-    color:#fff;
-
-    font-size:17px;
-
-    margin-bottom:12px;
+footer h3{
+font-family:Manrope;
+color:#fff;
+margin-bottom:12px
 }
 
-.footer-column p{
-    font-size:13px;
-
-    max-width:370px;
+footer p,
+footer a{
+font-size:12px;
+color:#a9a098
 }
+
+footer a:hover{color:#d0ae78}
 
 .footer-links{
-    display:grid;
-
-    gap:8px;
-
-    font-size:13px;
-}
-
-.footer-links a:hover{
-    color:#c5a66d;
+display:flex;
+flex-direction:column;
+gap:7px
 }
 
 .copyright{
-    max-width:1250px;
-
-    margin:auto;
-
-    text-align:center;
-
-    padding-top:22px;
-
-    font-size:12px;
+margin-top:45px;
+padding-top:18px;
+border-top:1px solid rgba(255,255,255,.08);
+font-size:10px;
+color:#80776f
 }
-
-.copyright span{
-    color:#c5a66d;
-}
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
 
 .whatsapp{
-    position:fixed;
-
-    right:22px;
-
-    bottom:22px;
-
-    width:56px;
-
-    height:56px;
-
-    background:#25D366;
-
-    color:#fff;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:25px;
-
-    z-index:2000;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-
-    transition:.25s;
+position:fixed;
+right:22px;
+bottom:22px;
+z-index:999;
+width:54px;
+height:54px;
+border-radius:50%;
+background:#26734d;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+font-size:24px
 }
 
-.whatsapp:hover{
-    transform:scale(1.08);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
-    .navbar{
-        padding:14px 20px;
-    }
+nav{display:none}
 
-    nav{
-        display:none;
-
-        position:absolute;
-
-        top:84px;
-
-        left:0;
-
-        right:0;
-
-        background:#20231e;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        padding:25px;
-
-        gap:20px;
-
-        border-top:1px solid rgba(255,255,255,.1);
-    }
-
-    nav.active{
-        display:flex;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .hero{
-        min-height:720px;
-    }
-
-    .hero-photo{
-        width:100%;
-
-        opacity:.4;
-    }
-
-    .hero::before{
-        background:
-        linear-gradient(
-            90deg,
-            rgba(20,22,19,.97),
-            rgba(20,22,19,.72),
-            rgba(20,22,19,.48)
-        );
-    }
-
-    .hero-content{
-        padding:85px 25px;
-    }
-
-    .about-grid,
-    .contact-grid,
-    .tech-grid{
-        grid-template-columns:1fr;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .tech-visual{
-        min-height:400px;
-    }
-
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .gallery-item.large{
-        grid-column:span 2;
-
-        grid-row:auto;
-
-        height:380px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
+.menu{
+display:block
 }
 
+.hero-grid,
+.about-grid,
+.tech-grid,
+.contact-grid,
+.network-grid{
+grid-template-columns:1fr
+}
 
-/* =========================================================
-   MOBILE
-========================================================= */
+.hero{
+min-height:auto;
+padding-top:140px
+}
+
+.hero-panel{min-height:520px}
+
+.service-grid{
+grid-template-columns:1fr 1fr
+}
+
+.work-grid{
+grid-template-columns:1fr 1fr
+}
+
+.why-grid{
+grid-template-columns:1fr 1fr
+}
+
+.cta-inner{
+flex-direction:column;
+align-items:flex-start
+}
+
+.network-grid{
+gap:45px
+}
+
+nav.open{
+display:flex;
+position:absolute;
+top:82px;
+left:0;
+width:100%;
+padding:20px;
+flex-direction:column;
+align-items:flex-start;
+background:rgba(36,29,25,.98);
+border-top:1px solid rgba(255,255,255,.08)
+}
+
+}
 
 @media(max-width:600px){
 
-    header{
-        position:sticky;
-    }
+.nav{height:72px}
 
-    .navbar{
-        min-height:72px;
+nav.open{top:72px}
 
-        padding:12px 18px;
-    }
+.header-logo img{height:46px}
 
-    .logo-area img{
-        width:44px;
+.nav-right{gap:18px}
 
-        height:44px;
-    }
+.brand-name{font-size:13px}
 
-    .logo-text strong{
-        font-size:14px;
-    }
+.brand-sub{font-size:8px}
 
-    .logo-text span{
-        font-size:9px;
+h1{font-size:43px}
 
-        letter-spacing:1.3px;
-    }
+section{padding:75px 0}
 
-    nav{
-        top:72px;
-    }
-
-    .hero{
-        min-height:690px;
-    }
-
-    .hero-photo{
-        width:100%;
-
-        height:100%;
-
-        opacity:.3;
-
-        object-position:center top;
-    }
-
-    .hero::before{
-        background:
-        linear-gradient(
-            90deg,
-            rgba(20,22,19,.97),
-            rgba(20,22,19,.8)
-        );
-    }
-
-    .hero-content{
-        padding:75px 22px;
-    }
-
-    .hero-small{
-        font-size:10px;
-
-        letter-spacing:2px;
-    }
-
-    .hero h1{
-        font-size:45px;
-
-        letter-spacing:-1.8px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-
-        align-items:stretch;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .hero-engineer{
-        right:20px;
-
-        left:20px;
-
-        bottom:20px;
-
-        min-width:auto;
-    }
-
-    .section{
-        padding:70px 20px;
-    }
-
-    .about-grid{
-        padding:70px 20px;
-    }
-
-    .about-image,
-    .about-image img{
-        min-height:350px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .service-image{
-        height:220px;
-    }
-
-    .gallery{
-        grid-template-columns:1fr 1fr;
-
-        gap:8px;
-    }
-
-    .gallery-item{
-        height:190px;
-    }
-
-    .gallery-item.large{
-        grid-column:span 2;
-
-        height:270px;
-    }
-
-    .tech-list{
-        grid-template-columns:1fr;
-    }
-
-    .tech-visual{
-        min-height:350px;
-    }
-
-    .why-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cta-inner{
-        padding:70px 20px;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-    }
-
-    .contact-grid{
-        gap:25px;
-    }
-
-    .contact-card{
-        padding:30px 24px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-
-        gap:30px;
-    }
-
-    .whatsapp{
-        right:16px;
-
-        bottom:16px;
-
-        width:52px;
-
-        height:52px;
-    }
-
+.service-grid,
+.work-grid,
+.why-grid,
+.tech-list{
+grid-template-columns:1fr
 }
 
+.hero-panel{min-height:460px}
+
+.statement{min-height:380px}
+
+.footer-grid{
+grid-template-columns:1fr
+}
+
+.actions .btn{
+width:100%
+}
+
+.network-card{
+padding:25px
+}
+
+}
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ======================================================
-     HEADER
-====================================================== -->
-
 <header>
+<div class="container nav">
 
-<div class="navbar">
-
-
-<a href="#home" class="logo-area">
-
-<img
-src="logo.png"
-alt="Radhika Construction & Surveying Logo">
-
-<div class="logo-text">
-
-<strong>
-Radhika Construction
-</strong>
-
-<span>
-& SURVEYING
-</span>
-
+<a href="#home" class="brand">
+<div>
+<div class="brand-name">RADHIKA CONSTRUCTION</div>
+<div class="brand-sub">& Surveying</div>
 </div>
-
 </a>
 
-
-<div
-class="menu-toggle"
-onclick="toggleMenu()">
-
-☰
-
-</div>
-
+<div class="nav-right">
 
 <nav id="nav">
-
-<a href="#about">
-About
-</a>
-
-<a href="#services">
-Services
-</a>
-
-<a href="#work">
-Our Work
-</a>
-
-<a href="#technology">
-Technology
-</a>
-
-<a href="#contact" class="nav-btn">
-Contact
-</a>
-
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#work">Our Work</a>
+<a href="#technology">Technology</a>
+<a href="#contact">Contact</a>
 </nav>
 
+<div class="menu" id="menu">☰</div>
+
+<a href="#home" class="header-logo" aria-label="Radhika Construction home">
+<img src="logo.png" alt="Radhika Construction logo">
+</a>
 
 </div>
-
+</div>
 </header>
 
 
+<main>
 
-<!-- ======================================================
-     HERO
-====================================================== -->
+<!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero wall dark-wall" id="home">
 
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+Engineering • Surveying • Planning
+</div>
+
+<h1>
+Good projects begin with
+<span>accurate information.</span>
+</h1>
+
+<p>
+Engineer-led surveying and construction support for land,
+infrastructure and development projects — using practical field
+knowledge with modern surveying technology.
+</p>
+
+<div class="actions">
+
+<a class="btn btn-primary" href="tel:+919424394299">
+Speak to an Engineer
+</a>
+
+<a class="btn btn-outline" href="#services">
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-panel">
 
 <img
 class="hero-photo"
-src="Father-photo.jpeg"
-alt="Er. Vivek Kumar Nema">
+src="father-photo.jpeg"
+alt="Er. Vivek Kumar Nema"
+width="640"
+height="905"
+>
 
+<div class="engineer-card">
+<strong>Er. Vivek Kumar Nema</strong>
+<small>Civil Engineer • Planner • Consultant</small>
+</div>
 
-<div class="hero-content">
-
-
-<div class="hero-small">
-
-Civil Engineering • Surveying • Planning
+<div class="coordinates">
+23°10' N &nbsp; 79°56' E &nbsp; / &nbsp; JABALPUR
+</div>
 
 </div>
 
-
-<h1>
-
-Building with<br>
-
-<span>
-Precision.
-</span>
-
-</h1>
-
-
-<p>
-
-Radhika Construction & Surveying provides professional
-civil engineering, surveying, mapping, planning and
-construction consultancy services.
-
-</p>
-
-
-<div class="hero-buttons">
-
-
-<a
-href="#services"
-class="btn btn-primary">
-
-Explore Services
-
-</a>
-
-
-<a
-href="#contact"
-class="btn btn-outline">
-
-Contact Us
-
-</a>
-
-
 </div>
-
-
-</div>
-
-
-<div class="hero-engineer">
-
-<strong>
-Er. Vivek Kumar Nema
-</strong>
-
-<span>
-Civil Engineer • Planner • Consultant
-</span>
-
-</div>
-
-
 </section>
 
 
+<!-- PROFESSIONAL NETWORK - ADDED HERE -->
 
-<!-- ======================================================
-     ABOUT
-====================================================== -->
+<section class="professional-network">
 
-<section class="about" id="about">
+<div class="container network-grid">
 
+<div class="network-content">
 
-<div class="about-grid">
-
-
-<div class="about-image">
-
-<img
-src="Field-survey-team.jpg"
-alt="Radhika Construction surveying field team">
-
+<div class="kicker">
+Professional Network
 </div>
 
-
-<div class="about-content">
-
-
-<div class="section-label">
-
-About the Firm
-
-</div>
-
-
-<h2 class="section-title">
-
-Experience meets<br>
-modern surveying.
-
+<h2>
+Strong connections.<br>
+Broader perspectives.
 </h2>
 
-
 <p>
-
-Radhika Construction & Surveying is a Jabalpur-based
-civil engineering and surveying consultancy working
-across residential, commercial and infrastructure
-requirements.
-
+At Radhika Construction & Surveying, we value the professional
+relationships built through years of experience in the construction,
+surveying, and consulting sectors.
 </p>
 
-
 <p>
-
-The firm combines practical civil engineering experience
-with modern surveying, mapping and digital technologies
-to support accurate planning and execution.
-
+Our network includes experienced professionals, business leaders,
+consultants, and industry contacts across India and Singapore,
+creating opportunities for meaningful professional interaction,
+knowledge exchange, and broader industry exposure.
 </p>
 
-
-<div class="highlight">
-
-<strong>
-Er. Vivek Kumar Nema
-</strong>
-
-<br>
-
-Civil Engineer, Planner & Consultant
+<p>
+We believe that strong professional connections encourage continuous
+learning, new perspectives, and the adoption of evolving practices
+within our field.
+</p>
 
 </div>
 
 
+<div class="network-card">
+
+<div class="network-card-top">
+PROFESSIONAL CONNECTIONS
 </div>
 
+<div class="network-items">
+
+<div>
+<strong>India</strong>
+<span>Industry & Professional Network</span>
+</div>
+
+<div>
+<strong>Singapore</strong>
+<span>International Professional Connections</span>
+</div>
+
+<div>
+<strong>Knowledge Exchange</strong>
+<span>Ideas • Experience • Perspectives</span>
+</div>
+
+<div>
+<strong>Industry Exposure</strong>
+<span>Learning • Collaboration • Growth</span>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
+<!-- ABOUT -->
 
-<!-- ======================================================
-     SERVICES
-====================================================== -->
+<section class="about wall ivory-wall" id="about">
+
+<div class="container about-grid">
+
+<div class="statement">
+
+<div class="kicker">
+Our approach
+</div>
+
+<div class="quote">
+“We measure first.<br>
+Then we build.”
+</div>
+
+<p>
+Clear measurements. Practical engineering. Better decisions.
+</p>
+
+</div>
+
+
+<div class="about-copy">
+
+<div class="kicker">
+About the firm
+</div>
+
+<h2>
+Technical work, handled with a practical mindset.
+</h2>
+
+<p>
+Radhika Construction & Surveying provides land surveying,
+mapping, planning and construction-related support for clients
+who need dependable field information before moving ahead with
+a project.
+</p>
+
+<p>
+Our work combines engineering understanding with tools such as
+Drone, GIS, DGPS, Total Station and Auto Level to help turn site
+conditions into useful information for planning and execution.
+</p>
+
+<div class="signature">
+
+<div>
+<strong>Er. Vivek Kumar Nema</strong>
+<br>
+<span>Civil Engineer • Planner • Consultant</span>
+</div>
+
+<span>Jabalpur, Madhya Pradesh</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
+<div class="container">
 
-<div class="section">
+<div class="section-head">
 
-
-<div class="section-label">
-
-What We Do
-
+<div class="kicker">
+What we do
 </div>
 
-
-<h2 class="section-title">
-
-Professional Services
-
+<h2>
+Surveying and engineering services for real project decisions.
 </h2>
 
-
-<p class="section-intro">
-
-A range of civil engineering, surveying, mapping and
-planning services designed for residential, commercial
-and infrastructure requirements.
-
+<p>
+From understanding the land to supporting construction planning,
+each service is focused on usable site information.
 </p>
-
-
-<div class="services-grid">
-
-
-<!-- SERVICE 01 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="drone-mapping.jpg"
-alt="Drone mapping">
 
 </div>
 
 
-<div class="service-content">
+<div class="service-grid">
 
-<span class="service-number">
+
+<article class="card">
+
+<div class="card-img">
+<img src="drone-mapping.jpg"
+alt="Drone aerial mapping"
+loading="lazy">
+</div>
+
+<div class="card-body">
+
+<div class="num">
 01 / MAPPING
-</span>
+</div>
 
 <h3>
 Aerial Mapping & GIS Survey
 </h3>
 
 <p>
-
-Drone-based aerial information and GIS-oriented
-mapping for understanding site conditions and
-land features.
-
+Drone-based aerial information and GIS-oriented mapping for
+understanding site conditions and land features.
 </p>
 
-</div>
-
-</div>
-
-
-
-<!-- SERVICE 02 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="surveying-field.jpg"
-alt="Land surveying">
-
-</div>
-
-
-<div class="service-content">
-
-<span class="service-number">
-02 / LAND
+<span class="tech-tag">
+Drone • GIS
 </span>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+<img src="surveying-field.jpg"
+alt="Land survey in the field"
+loading="lazy">
+</div>
+
+<div class="card-body">
+
+<div class="num">
+02 / LAND
+</div>
 
 <h3>
 Land Survey & Contours
 </h3>
 
 <p>
-
-Detailed field surveying and contour information
-to support site assessment, design and planning.
-
+Detailed field surveying and contour information to support
+site assessment, design and planning.
 </p>
 
-</div>
-
-</div>
-
-
-
-<!-- SERVICE 03 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="map.jpg"
-alt="Land mapping">
-
-</div>
-
-
-<div class="service-content">
-
-<span class="service-number">
-03 / DEMARCATION
+<span class="tech-tag">
+DGPS
 </span>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+<img src="map.jpg"
+alt="Plot and land demarcation map"
+loading="lazy">
+</div>
+
+<div class="card-body">
+
+<div class="num">
+03 / DEMARCATION
+</div>
 
 <h3>
 Plot & Land Demarcation
 </h3>
 
 <p>
-
-Practical demarcation work to establish and communicate
-site boundaries based on available survey information.
-
+Practical demarcation work to establish and communicate site
+boundaries based on available survey information.
 </p>
 
-</div>
-
-</div>
-
-
-
-<!-- SERVICE 04 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="road-map.jpg"
-alt="Road surveying">
-
-</div>
-
-
-<div class="service-content">
-
-<span class="service-number">
-04 / ROADS
+<span class="tech-tag">
+DGPS
 </span>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+<img src="road-map.jpg"
+alt="Road survey map"
+loading="lazy">
+</div>
+
+<div class="card-body">
+
+<div class="num">
+04 / ROADS
+</div>
 
 <h3>
 Road Surveying & Levelling
 </h3>
 
 <p>
-
-Survey and level information for road and infrastructure
-related work, supporting accurate site execution.
-
+Survey and level information for road and infrastructure-related
+work, supporting accurate site execution.
 </p>
 
-</div>
-
-</div>
-
-
-
-<!-- SERVICE 05 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="landuse-map.jpg"
-alt="Land use mapping">
-
-</div>
-
-
-<div class="service-content">
-
-<span class="service-number">
-05 / TERRAIN
+<span class="tech-tag">
+Total Station • Auto Level
 </span>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+<img src="landuse-map.jpg"
+alt="Land use and catchment map"
+loading="lazy">
+</div>
+
+<div class="card-body">
+
+<div class="num">
+05 / TERRAIN
+</div>
 
 <h3>
 Catchment Area Analysis
 </h3>
 
 <p>
-
-Terrain and drainage-related analysis to help understand
-how water moves across a site and its surrounding area.
-
+Terrain and drainage-related analysis to help understand how
+water moves across a site and its surrounding area.
 </p>
 
-</div>
-
-</div>
-
-
-
-<!-- SERVICE 06 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="residential-design.jpg"
-alt="Residential design">
-
-</div>
-
-
-<div class="service-content">
-
-<span class="service-number">
-06 / BUILD
+<span class="tech-tag">
+GIS • Survey Data
 </span>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+<img src="residential-design.jpg"
+alt="Residential design and planning"
+loading="lazy">
+</div>
+
+<div class="card-body">
+
+<div class="num">
+06 / BUILD
+</div>
 
 <h3>
 Construction & Planning
 </h3>
 
 <p>
-
-Engineering-oriented support for construction planning,
-site understanding and project preparation.
-
+Engineering-oriented support for construction planning, site
+understanding and project preparation.
 </p>
 
-</div>
-
-</div>
-
-
-
-<!-- SERVICE 07 -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="stp-proposal.jpg"
-alt="STP proposal">
-
-</div>
-
-
-<div class="service-content">
-
-<span class="service-number">
-07 / APPROVALS
+<span class="tech-tag">
+Civil Engineering
 </span>
+
+</div>
+
+</article>
+
+
+<article class="card card-wide">
+
+<div class="card-body">
+
+<div class="num">
+07 / APPROVALS
+</div>
 
 <h3>
 T&amp;CP and RERA Approved
 </h3>
 
 <p>
-
-Town &amp; Country Planning (T&amp;CP) and RERA approved
-planning and layout services supported by accurate
-survey information.
-
+Town &amp; Country Planning (T&amp;CP) and RERA approved planning
+and layout services, supported by accurate survey information.
 </p>
 
-</div>
+<span class="tech-tag">
+T&amp;CP • RERA
+</span>
 
 </div>
 
+</article>
+
 
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- ======================================================
-     OUR WORK
-====================================================== -->
+<!-- OUR WORK -->
 
 <section class="work" id="work">
 
+<div class="container">
 
-<div class="section">
+<div class="section-head">
 
-
-<div class="section-label">
-
-Our Work
-
+<div class="kicker">
+Our work
 </div>
 
-
-<h2 class="section-title">
-
-Selected Work
-
+<h2>
+Planning and design work from the field.
 </h2>
 
-
-<p class="section-intro">
-
-A glimpse of surveying, planning, mapping and
-civil engineering work.
-
+<p>
+A few examples of the site planning, design and proposal work
+we support.
 </p>
 
-
-<div class="gallery">
-
-
-<div class="gallery-item large">
-
-<img
-src="Field-survey-team.jpg"
-alt="Field survey team">
-
-<div class="gallery-label">
-Field Surveying
-</div>
-
 </div>
 
 
-<div class="gallery-item">
-
-<img
-src="drone-mapping.jpg"
-alt="Drone mapping">
-
-<div class="gallery-label">
-Drone Mapping
-</div>
-
-</div>
+<div class="work-grid">
 
 
-<div class="gallery-item">
+<figure class="work-item">
 
-<img
-src="surveying-field.jpg"
-alt="Surveying field work">
+<img src="temple-site.jpg"
+alt="Temple site planning"
+loading="lazy">
 
-<div class="gallery-label">
-Land Survey
-</div>
+<figcaption>
+<strong>Temple Site Planning</strong>
+<span>Site layout and planning</span>
+</figcaption>
 
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="map.jpg"
-alt="Survey map">
-
-<div class="gallery-label">
-Land Mapping
-</div>
-
-</div>
+</figure>
 
 
-<div class="gallery-item">
+<figure class="work-item">
 
-<img
-src="road-map.jpg"
-alt="Road survey map">
+<img src="stp-proposal.jpg"
+alt="STP proposal"
+loading="lazy">
 
-<div class="gallery-label">
-Road Survey
-</div>
+<figcaption>
+<strong>STP Proposal</strong>
+<span>Sewage treatment plant planning</span>
+</figcaption>
 
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="landuse-map.jpg"
-alt="Land use map">
-
-<div class="gallery-label">
-Land Use Analysis
-</div>
-
-</div>
+</figure>
 
 
-<div class="gallery-item">
+<figure class="work-item">
 
-<img
-src="residential-design.jpg"
-alt="Residential design">
+<img src="green-building.jpg"
+alt="Green building design"
+loading="lazy">
 
-<div class="gallery-label">
-Residential Planning
-</div>
+<figcaption>
+<strong>Green Building Design</strong>
+<span>Sustainable building concepts</span>
+</figcaption>
 
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="green-building.jpg"
-alt="Green building">
-
-<div class="gallery-label">
-Building Projects
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="temple-site.jpg"
-alt="Temple site">
-
-<div class="gallery-label">
-Site Planning
-</div>
-
-</div>
+</figure>
 
 
 </div>
-
 </div>
-
 </section>
 
 
+<!-- TECHNOLOGY -->
 
-<!-- ======================================================
-     TECHNOLOGY
-====================================================== -->
+<section class="technology wall forest-wall" id="technology">
 
-<section class="technology" id="technology">
-
-
-<div class="section tech-grid">
-
+<div class="container tech-grid">
 
 <div>
 
+<div class="section-head">
 
-<div class="section-label">
-
-Technology & Field Work
-
+<div class="kicker">
+Technology & field work
 </div>
 
-
-<h2 class="section-title">
-
-Modern instruments.<br>
-Ground-level understanding.
-
+<h2>
+Modern instruments. Ground-level understanding.
 </h2>
 
-
-<p class="section-intro">
-
-Technology is useful when it produces information that
-can actually help a project move forward. Our surveying
-workflow brings field measurements and digital information
-together.
-
+<p>
+Technology is useful when it produces information that can
+actually help a project move forward. Our surveying workflow
+brings field measurements and digital information together.
 </p>
+
+</div>
 
 
 <div class="tech-list">
 
-
-<div class="tech-card">
-
-<div class="tech-icon">
-◈
+<div class="tech-item">
+<strong>Drone</strong>
+<span>Aerial mapping & site overview</span>
 </div>
 
-<strong>
-Drone
-</strong>
-
-<span>
-Aerial mapping & site overview
-</span>
-
+<div class="tech-item">
+<strong>GIS</strong>
+<span>Spatial information & mapping</span>
 </div>
 
-
-<div class="tech-card">
-
-<div class="tech-icon">
-⌖
+<div class="tech-item">
+<strong>DGPS</strong>
+<span>Positioning & land survey work</span>
 </div>
 
-<strong>
-GIS
-</strong>
-
-<span>
-Spatial information & mapping
-</span>
-
+<div class="tech-item">
+<strong>Total Station</strong>
+<span>Precise field measurement</span>
 </div>
 
-
-<div class="tech-card">
-
-<div class="tech-icon">
-◎
+<div class="tech-item">
+<strong>Auto Level</strong>
+<span>Levelling & elevation work</span>
 </div>
 
-<strong>
-DGPS
-</strong>
-
-<span>
-Positioning & land survey work
-</span>
-
-</div>
-
-
-<div class="tech-card">
-
-<div class="tech-icon">
-⊕
-</div>
-
-<strong>
-Total Station
-</strong>
-
-<span>
-Precise field measurement
-</span>
-
-</div>
-
-
-<div class="tech-card">
-
-<div class="tech-icon">
-⌁
-</div>
-
-<strong>
-Auto Level
-</strong>
-
-<span>
-Levelling & elevation work
-</span>
-
-</div>
-
-
-<div class="tech-card">
-
-<div class="tech-icon">
-◆
-</div>
-
-<strong>
-Engineering
-</strong>
-
-<span>
-Practical project interpretation
-</span>
-
-</div>
-
-
+<div class="tech-item">
+<strong>Engineering</strong>
+<span>Practical project interpretation</span>
 </div>
 
 </div>
 
+</div>
 
 
 <div class="tech-visual">
 
+<div class="gridlines"></div>
 
-<div class="tech-circle"></div>
+<div class="map-pin"></div>
 
-<div class="tech-line"></div>
-
-<div class="tech-label">
-
+<div class="visual-label">
 FIELD DATA / TERRAIN / COORDINATES / LEVELS
+</div>
 
 </div>
 
-
 </div>
-
-
-</div>
-
 </section>
 
 
-
-<!-- ======================================================
-     WHY US
-====================================================== -->
+<!-- WHY WORK WITH US -->
 
 <section class="why">
 
+<div class="container">
 
-<div class="section">
+<div class="section-head">
 
+<div class="kicker">
+Why work with us
+</div>
 
-<div class="section-label">
-
-Why Work With Us
+<h2>
+A straightforward approach to technical work.
+</h2>
 
 </div>
 
 
-<h2 class="section-title">
-
-A straightforward approach to technical work.
-
-</h2>
-
-
 <div class="why-grid">
-
 
 <div class="why-item">
 
@@ -2495,10 +1654,8 @@ Engineer-led
 </strong>
 
 <p>
-
-Work is approached from a civil engineering
-perspective, not just as a data collection exercise.
-
+Work is approached from a civil engineering perspective,
+not just as a data collection exercise.
 </p>
 
 </div>
@@ -2507,14 +1664,12 @@ perspective, not just as a data collection exercise.
 <div class="why-item">
 
 <strong>
-Clear Communication
+Clear communication
 </strong>
 
 <p>
-
-We focus on explaining site information in a way
-that clients and project teams can use.
-
+We focus on explaining site information in a way that
+clients and project teams can use.
 </p>
 
 </div>
@@ -2523,14 +1678,12 @@ that clients and project teams can use.
 <div class="why-item">
 
 <strong>
-Modern Methods
+Modern methods
 </strong>
 
 <p>
-
-Digital surveying and mapping tools are used where
-they add practical value to the work.
-
+Digital surveying and mapping tools are used where they
+add practical value to the work.
 </p>
 
 </div>
@@ -2543,64 +1696,43 @@ Project-focused
 </strong>
 
 <p>
-
-Measurements and analysis are connected to the
-actual planning or construction requirement.
-
+Measurements and analysis are connected to the actual
+planning or construction requirement.
 </p>
 
 </div>
 
-
 </div>
 
 </div>
-
 </section>
 
 
-
-<!-- ======================================================
-     CTA
-====================================================== -->
+<!-- CTA -->
 
 <section class="cta">
 
-
-<div class="cta-inner">
-
+<div class="container cta-inner">
 
 <div>
 
-
-<div class="section-label">
-
-Have a Site or Project?
-
+<div class="kicker">
+Have a site or project?
 </div>
-
 
 <h2>
-
-Let's understand the ground
-before the work begins.
-
+Let's understand the ground before the work begins.
 </h2>
 
-
 <p>
-
-Discuss your surveying, mapping or
-construction-planning requirement with us.
-
+Discuss your surveying, mapping or construction-planning
+requirement with us.
 </p>
-
 
 </div>
 
 
-<a
-class="btn btn-primary"
+<a class="btn btn-primary"
 href="https://wa.me/919424394299?text=Hello%20Radhika%20Construction%20%26%20Surveying%2C%20I%20would%20like%20to%20discuss%20a%20project."
 target="_blank"
 rel="noopener">
@@ -2609,36 +1741,28 @@ WhatsApp Us
 
 </a>
 
-
 </div>
 
 </section>
 
 
+<!-- CONTACT -->
 
-<!-- ======================================================
-     CONTACT
-====================================================== -->
+<section class="contact wall ivory-wall" id="contact">
 
-<section class="contact" id="contact">
+<div class="container">
 
+<div class="section-head">
 
-<div class="section">
-
-
-<div class="section-label">
-
+<div class="kicker">
 Contact
-
 </div>
 
-
-<h2 class="section-title">
-
-Tell us what you need
-surveyed, mapped or planned.
-
+<h2>
+Tell us what you need surveyed, mapped or planned.
 </h2>
+
+</div>
 
 
 <div class="contact-grid">
@@ -2654,8 +1778,7 @@ Engineer
 </small>
 
 <span>
-Er. Vivek Kumar Nema —
-Civil Engineer, Planner & Consultant
+Er. Vivek Kumar Nema — Civil Engineer, Planner &amp; Consultant
 </span>
 
 </div>
@@ -2686,10 +1809,8 @@ Phone
 Email
 </small>
 
-<a href="mailto:radhikaconstructions07@gmail.com">
-
-radhikaconstructions07@gmail.com
-
+<a href="mailto:viveknemajbp@gmail.com">
+viveknemajbp@gmail.com
 </a>
 
 </div>
@@ -2698,13 +1819,12 @@ radhikaconstructions07@gmail.com
 <div class="contact-row">
 
 <small>
-Location
+Office
 </small>
 
 <span>
-
-Jabalpur, Madhya Pradesh
-
+5/96, Damoh Road, Pandit Deen Dayal Chowk,<br>
+Vijay Nagar, Jabalpur, Madhya Pradesh – 482001
 </span>
 
 </div>
@@ -2717,9 +1837,7 @@ GSTIN
 </small>
 
 <span>
-
 23ACSPN3182G2ZE
-
 </span>
 
 </div>
@@ -2728,117 +1846,68 @@ GSTIN
 </div>
 
 
+<div class="map-box">
 
-<div class="contact-card">
+<div class="map-card">
 
-
-<div class="section-label">
-
-Radhika Construction & Surveying
-
+<div class="kicker">
+Jabalpur, Madhya Pradesh
 </div>
-
 
 <h3>
-
-Professional surveying,
-mapping & construction support.
-
+Visit or contact the office
 </h3>
 
-
 <p>
-
-For surveying, mapping, planning and
-construction-related requirements,
-contact Er. Vivek Kumar Nema.
-
+For project discussions, survey requirements and
+construction-planning enquiries.
 </p>
 
+<a class="btn btn-primary"
+href="https://www.google.com/maps/search/?api=1&query=5%2F96%2C%20Damoh%20Road%2C%20Pandit%20Deen%20Dayal%20Chowk%2C%20Vijay%20Nagar%2C%20Jabalpur%2C%20Madhya%20Pradesh%20482001"
+target="_blank"
+rel="noopener">
 
-<a
-class="btn btn-primary"
-href="mailto:radhikaconstructions07@gmail.com">
-
-Send an Email
+Open in Google Maps
 
 </a>
 
-
-<div class="gstin">
-
-<small>
-GSTIN
-</small>
-
-<strong>
-23ACSPN3182G2ZE
-</strong>
+</div>
 
 </div>
 
 
 </div>
-
-
 </div>
-
-</div>
-
 </section>
 
+</main>
 
 
-<!-- ======================================================
-     LEGAL
-====================================================== -->
-
-<section class="legal">
-
-<strong>
-Radhika Construction & Surveying
-</strong>
-
-&nbsp; • &nbsp;
-
-Civil Engineering • Surveying • Planning
-
-&nbsp; • &nbsp;
-
-Jabalpur, Madhya Pradesh
-
-</section>
-
-
-
-<!-- ======================================================
-     FOOTER
-====================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
+<div class="container">
 
 <div class="footer-grid">
 
 
-<div class="footer-column">
+<div>
 
 <h3>
 Radhika Construction & Surveying
 </h3>
 
 <p>
-
-Engineer-led surveying, mapping and
-construction support in Jabalpur,
-Madhya Pradesh.
-
+Engineer-led surveying, mapping and construction support
+in Jabalpur, Madhya Pradesh.
 </p>
 
 </div>
 
 
-<div class="footer-column">
+<div>
 
 <h3>
 Services
@@ -2863,7 +1932,7 @@ Road Surveying
 </a>
 
 <a href="#services">
-Construction & Planning
+T&amp;CP &amp; RERA Approved
 </a>
 
 </div>
@@ -2871,7 +1940,7 @@ Construction & Planning
 </div>
 
 
-<div class="footer-column">
+<div>
 
 <h3>
 Contact
@@ -2887,8 +1956,8 @@ Contact
 +91 91311 97196
 </a>
 
-<a href="mailto:radhikaconstructions07@gmail.com">
-radhikaconstructions07@gmail.com
+<a href="mailto:viveknemajbp@gmail.com">
+Email us
 </a>
 
 </div>
@@ -2901,68 +1970,45 @@ radhikaconstructions07@gmail.com
 
 <div class="copyright">
 
-© 2026
-<span>
-Radhika Construction & Surveying
-</span>
-
-. All rights reserved.
+© <span id="year"></span>
+Radhika Construction & Surveying. All rights reserved.
 
 </div>
 
+</div>
 
 </footer>
 
 
-
-<!-- ======================================================
-     WHATSAPP BUTTON
-====================================================== -->
-
-<a
-class="whatsapp"
+<a class="whatsapp"
 href="https://wa.me/919424394299?text=Hello%20Radhika%20Construction%20%26%20Surveying%2C%20I%20would%20like%20to%20discuss%20a%20project."
 target="_blank"
 rel="noopener"
 aria-label="WhatsApp">
 
-☎
+◔
 
 </a>
 
 
-
-<!-- ======================================================
-     JAVASCRIPT
-====================================================== -->
-
 <script>
 
-function toggleMenu(){
+document.getElementById('year').textContent =
+new Date().getFullYear();
 
-    const nav = document.getElementById("nav");
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
 
-    nav.classList.toggle("active");
-
-}
-
-
-document.querySelectorAll("#nav a").forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-        document
-        .getElementById("nav")
-        .classList
-        .remove("active");
-
-    });
-
+menu.addEventListener('click', () => {
+nav.classList.toggle('open');
 });
+
+nav.querySelectorAll('a').forEach(a =>
+a.addEventListener('click', () =>
+nav.classList.remove('open')
+));
 
 </script>
 
-
 </body>
-
 </html>
