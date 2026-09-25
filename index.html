@@ -49,7 +49,6 @@ img{
     display:block;
 }
 
-
 /* ================= HEADER ================= */
 
 header{
@@ -132,7 +131,6 @@ nav a:hover{
     cursor:pointer;
 }
 
-
 /* ================= HERO ================= */
 
 .hero{
@@ -159,7 +157,6 @@ nav a:hover{
     z-index:1;
 }
 
-/* DIRECT GITHUB IMAGE */
 .hero-photo{
     position:absolute;
     right:0;
@@ -245,7 +242,6 @@ nav a:hover{
     color:#20231e;
 }
 
-
 /* ================= PROFESSIONAL NETWORK ================= */
 
 .professional-network{
@@ -322,8 +318,7 @@ nav a:hover{
     font-size:13px;
 }
 
-
-/* ================= GENERAL SECTIONS ================= */
+/* ================= GENERAL ================= */
 
 .section{
     max-width:1180px;
@@ -353,7 +348,6 @@ nav a:hover{
     font-size:15px;
 }
 
-
 /* ================= ABOUT ================= */
 
 .about{
@@ -378,7 +372,6 @@ nav a:hover{
     background:#292c26;
 }
 
-/* DIRECT GITHUB IMAGE */
 .about-image img{
     width:100%;
     height:100%;
@@ -404,7 +397,6 @@ nav a:hover{
     margin-top:22px;
     background:rgba(255,255,255,.4);
 }
-
 
 /* ================= SERVICES ================= */
 
@@ -465,8 +457,7 @@ nav a:hover{
     font-size:13.5px;
 }
 
-
-/* ================= WORK ================= */
+/* ================= PREMIUM PRESENTATIONS ================= */
 
 .work{
     background:#20231e;
@@ -480,47 +471,164 @@ nav a:hover{
     color:#bdbdb5;
 }
 
-.gallery{
-    margin-top:40px;
+.presentation-grid{
+    margin-top:38px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:13px;
+    gap:14px;
 }
 
-.gallery-item{
-    height:260px;
-    overflow:hidden;
-    border-radius:7px;
+.presentation-card{
+    cursor:pointer;
+    border:1px solid rgba(210,180,119,.22);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    border-radius:10px;
+    padding:22px;
+    color:#fff;
+    transition:.3s;
     position:relative;
-    background:#30332d;
+    overflow:hidden;
 }
 
-.gallery-item.large{
-    height:390px;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.05);
-}
-
-.gallery-item::after{
+.presentation-card::before{
     content:"";
     position:absolute;
-    inset:0;
-    background:linear-gradient(
-        transparent 55%,
-        rgba(0,0,0,.35)
-    );
-    pointer-events:none;
+    width:90px;
+    height:90px;
+    right:-35px;
+    top:-35px;
+    border-radius:50%;
+    background:rgba(197,166,109,.12);
 }
 
+.presentation-card:hover{
+    transform:translateY(-5px);
+    border-color:#c5a66d;
+    box-shadow:0 15px 40px rgba(0,0,0,.28);
+}
+
+.presentation-card.active{
+    border-color:#c5a66d;
+    box-shadow:0 0 0 1px rgba(197,166,109,.2);
+}
+
+.presentation-number{
+    color:#d2b477;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.presentation-card h3{
+    margin:9px 0 5px;
+    font-size:17px;
+}
+
+.presentation-card p{
+    color:#aeb0a8;
+    font-size:12.5px;
+}
+
+.pdf-viewer{
+    margin-top:25px;
+    border:1px solid rgba(210,180,119,.3);
+    border-radius:12px;
+    background:#171914;
+    overflow:hidden;
+    box-shadow:0 25px 70px rgba(0,0,0,.32);
+}
+
+.viewer-top{
+    padding:23px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.viewer-title h3{
+    color:#fff;
+    font-size:22px;
+    margin-bottom:4px;
+}
+
+.viewer-title p{
+    color:#aaa;
+    font-size:13px;
+}
+
+.page-info{
+    color:#d2b477;
+    font-size:12px;
+    white-space:nowrap;
+}
+
+.pdf-stage{
+    padding:25px;
+    min-height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(197,166,109,.06),
+            transparent 55%
+        );
+}
+
+#pdfCanvas{
+    display:block;
+    max-width:100%;
+    height:auto;
+    background:#fff;
+    border-radius:4px;
+    box-shadow:0 15px 45px rgba(0,0,0,.4);
+}
+
+.pdf-loading{
+    color:#c5a66d;
+    font-size:14px;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.viewer-controls{
+    padding:18px 25px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.viewer-btn{
+    border:1px solid rgba(197,166,109,.55);
+    background:transparent;
+    color:#e6d4aa;
+    padding:9px 16px;
+    border-radius:5px;
+    cursor:pointer;
+    font-family:inherit;
+    font-weight:700;
+    transition:.25s;
+}
+
+.viewer-btn:hover{
+    background:#c5a66d;
+    color:#20231e;
+}
+
+.viewer-btn:disabled{
+    opacity:.35;
+    cursor:not-allowed;
+}
 
 /* ================= TECHNOLOGY ================= */
 
@@ -556,7 +664,6 @@ nav a:hover{
     color:#68665f;
     font-size:13.5px;
 }
-
 
 /* ================= CONTACT ================= */
 
@@ -617,7 +724,6 @@ nav a:hover{
     font-size:14px;
 }
 
-
 /* ================= LEGAL ================= */
 
 .legal{
@@ -643,7 +749,6 @@ footer{
 footer span{
     color:#c5a66d;
 }
-
 
 /* ================= MOBILE ================= */
 
@@ -689,7 +794,8 @@ footer span{
         grid-template-columns:1fr;
     }
 
-    .services-grid{
+    .services-grid,
+    .presentation-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -701,7 +807,6 @@ footer span{
         gap:40px;
     }
 }
-
 
 @media(max-width:600px){
 
@@ -742,36 +847,34 @@ footer span{
     }
 
     .services-grid,
+    .presentation-grid,
     .tech-grid{
         grid-template-columns:1fr;
     }
 
-    .gallery{
-        grid-template-columns:1fr 1fr;
-        gap:8px;
-    }
-
-    .gallery-item,
-    .gallery-item.large{
-        height:180px;
-    }
-
-    .gallery-item:first-child{
-        grid-column:span 2;
-        height:250px;
-    }
-
     .network-card{
         padding:23px;
+    }
+
+    .viewer-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .pdf-stage{
+        padding:12px;
+        min-height:350px;
+    }
+
+    .viewer-controls{
+        padding:15px;
     }
 }
 
 </style>
 </head>
 
-
-<body>
-
+    <body>
 
 <!-- ================= HEADER ================= -->
 
@@ -796,11 +899,9 @@ alt="Radhika Construction & Surveying Logo"
 
 </a>
 
-
 <div class="menu-toggle" onclick="toggleMenu()">
 ☰
 </div>
-
 
 <nav id="nav">
 
@@ -823,18 +924,15 @@ alt="Radhika Construction & Surveying Logo"
 </header>
 
 
-
 <!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-
 <img
 class="hero-photo"
-src="https://raw.githubusercontent.com/radhikaconstructions07-cpu/Radhika-Constructions-website-/main/Father-photo.jpeg"
+src="Father-photo.jpeg"
 alt="Er. Vivek Kumar Nema"
 >
-
 
 <div class="hero-content">
 
@@ -842,17 +940,15 @@ alt="Er. Vivek Kumar Nema"
 Civil Engineering • Surveying • Planning
 </div>
 
-
 <h1>
 Building with<br>
 <span>Precision.</span>
 </h1>
 
-
 <p>
-Radhika Construction & Surveying provides professional civil engineering, surveying, mapping, planning and construction consultancy services.
+Radhika Construction & Surveying provides professional civil engineering,
+surveying, mapping, planning and construction consultancy services.
 </p>
-
 
 <div class="hero-buttons">
 
@@ -871,13 +967,11 @@ Contact Us
 </section>
 
 
-
 <!-- ================= PROFESSIONAL NETWORK ================= -->
 
 <section class="professional-network" id="network">
 
 <div class="network-grid">
-
 
 <div class="network-content">
 
@@ -885,32 +979,34 @@ Contact Us
 Professional Network
 </div>
 
-
 <h2>
 Strong connections.<br>
 Broader perspectives.
 </h2>
 
-
 <p>
-At Radhika Construction & Surveying, we value the professional relationships built through years of experience in the construction, surveying, and consulting sectors.
+At Radhika Construction & Surveying, we value the professional
+relationships built through years of experience in the construction,
+surveying, and consulting sectors.
 </p>
 
-
 <p>
-Our network includes experienced professionals, business leaders, consultants, and industry contacts across India and Singapore, creating opportunities for meaningful professional interaction, knowledge exchange, and broader industry exposure.
+Our network includes experienced professionals, business leaders,
+consultants, and industry contacts across India and Singapore,
+creating opportunities for meaningful professional interaction,
+knowledge exchange, and broader industry exposure.
 </p>
 
-
 <p>
-We believe that strong professional connections encourage continuous learning, new perspectives, and the adoption of evolving practices within our field.
+We believe that strong professional connections encourage continuous
+learning, new perspectives, and the adoption of evolving practices
+within our field.
 </p>
 
 </div>
 
 
 <div class="network-card">
-
 
 <div class="network-item">
 
@@ -922,7 +1018,6 @@ Industry & Professional Network
 
 </div>
 
-
 <div class="network-item">
 
 <strong>Singapore</strong>
@@ -932,7 +1027,6 @@ International Professional Connections
 </span>
 
 </div>
-
 
 <div class="network-item">
 
@@ -944,7 +1038,6 @@ Ideas • Experience • Perspectives
 
 </div>
 
-
 <div class="network-item">
 
 <strong>Industry Exposure</strong>
@@ -955,13 +1048,11 @@ Learning • Collaboration • Growth
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- ================= ABOUT ================= -->
@@ -970,11 +1061,10 @@ Learning • Collaboration • Growth
 
 <div class="about-grid">
 
-
 <div class="about-image">
 
 <img
-src="https://raw.githubusercontent.com/radhikaconstructions07-cpu/Radhika-Constructions-website-/main/Field-survey-team.jpg"
+src="Field-survey-team.jpg"
 alt="Surveying and field work"
 >
 
@@ -987,22 +1077,22 @@ alt="Surveying and field work"
 About the Firm
 </div>
 
-
 <h2 class="section-title">
 Experience meets<br>
 modern surveying.
 </h2>
 
-
 <p>
-Radhika Construction & Surveying is a Jabalpur-based civil engineering and surveying consultancy working across residential, commercial and infrastructure requirements.
+Radhika Construction & Surveying is a Jabalpur-based civil engineering
+and surveying consultancy working across residential, commercial and
+infrastructure requirements.
 </p>
 
-
 <p>
-The firm combines practical civil engineering experience with modern surveying, mapping and digital technologies to support accurate planning and execution.
+The firm combines practical civil engineering experience with modern
+surveying, mapping and digital technologies to support accurate
+planning and execution.
 </p>
-
 
 <div class="highlight">
 
@@ -1023,26 +1113,22 @@ Civil Engineer, Planner & Consultant
 </section>
 
 
-
 <!-- ================= SERVICES ================= -->
 
 <section class="section" id="services">
-
 
 <div class="section-label">
 What We Do
 </div>
 
-
 <h2 class="section-title">
 Professional Services
 </h2>
 
-
 <p class="section-intro">
-A range of civil engineering, surveying, mapping and planning services designed for residential, commercial and infrastructure requirements.
+A range of civil engineering, surveying, mapping and planning services
+designed for residential, commercial and infrastructure requirements.
 </p>
-
 
 
 <div class="services-grid">
@@ -1061,7 +1147,6 @@ alt="Drone mapping"
 
 </div>
 
-
 <div class="service-content">
 
 <span class="service-number">
@@ -1073,13 +1158,13 @@ Drone & Digital Mapping
 </h3>
 
 <p>
-Digital mapping and aerial survey solutions for accurate site information and planning.
+Digital mapping and aerial survey solutions for accurate site
+information and planning.
 </p>
 
 </div>
 
 </div>
-
 
 
 <!-- 02 -->
@@ -1095,7 +1180,6 @@ alt="Land surveying"
 
 </div>
 
-
 <div class="service-content">
 
 <span class="service-number">
@@ -1107,13 +1191,13 @@ Land Surveying
 </h3>
 
 <p>
-Field surveying, boundary surveys, land measurements and site documentation.
+Field surveying, boundary surveys, land measurements and site
+documentation.
 </p>
 
 </div>
 
 </div>
-
 
 
 <!-- 03 -->
@@ -1129,7 +1213,6 @@ alt="Mapping services"
 
 </div>
 
-
 <div class="service-content">
 
 <span class="service-number">
@@ -1141,13 +1224,13 @@ Mapping & Planning
 </h3>
 
 <p>
-Site plans, maps, digital documentation and planning support for different requirements.
+Site plans, maps, digital documentation and planning support for
+different requirements.
 </p>
 
 </div>
 
 </div>
-
 
 
 <!-- 04 -->
@@ -1157,12 +1240,11 @@ Site plans, maps, digital documentation and planning support for different requi
 <div class="service-image">
 
 <img
-src="road-map.jpg"
+src="map.jpg"
 alt="Road planning"
 >
 
 </div>
-
 
 <div class="service-content">
 
@@ -1175,13 +1257,13 @@ Road & Infrastructure
 </h3>
 
 <p>
-Surveying and planning support for roads, housing projects and infrastructure works.
+Surveying and planning support for roads, housing projects and
+infrastructure works.
 </p>
 
 </div>
 
 </div>
-
 
 
 <!-- 05 -->
@@ -1191,12 +1273,11 @@ Surveying and planning support for roads, housing projects and infrastructure wo
 <div class="service-image">
 
 <img
-src="landuse-map.jpg"
-alt="Land use mapping"
+src="green-building.jpg"
+alt="Land use and site studies"
 >
 
 </div>
-
 
 <div class="service-content">
 
@@ -1217,7 +1298,6 @@ Land-use mapping, site analysis and measurement assistance.
 </div>
 
 
-
 <!-- 06 -->
 
 <div class="service-card">
@@ -1231,7 +1311,6 @@ alt="Residential design"
 
 </div>
 
-
 <div class="service-content">
 
 <span class="service-number">
@@ -1243,7 +1322,8 @@ Residential & Building Work
 </h3>
 
 <p>
-Residential planning, building-related consultancy and civil work support.
+Residential planning, building-related consultancy and civil work
+support.
 </p>
 
 </div>
@@ -1256,163 +1336,237 @@ Residential planning, building-related consultancy and civil work support.
 </section>
 
 
-
-<!-- ================= OUR WORK ================= -->
+<!-- ================= PREMIUM PROJECT PRESENTATIONS ================= -->
 
 <section class="work" id="work">
 
 <div class="section">
 
-
 <div class="section-label">
 Our Work
 </div>
 
-
 <h2 class="section-title">
-Selected Work
+Project Presentations
 </h2>
 
-
 <p class="section-intro">
-A glimpse of surveying, planning, mapping and civil engineering work.
+Explore our completed projects through detailed professional
+presentations. Select a project below to view every page directly
+inside the website.
 </p>
 
 
+<div class="presentation-grid">
 
-<div class="gallery">
 
+<div class="presentation-card active"
+onclick="openPresentation(0)">
 
-<div class="gallery-item large">
+<div class="presentation-number">
+PROJECT 01
+</div>
 
-<img
-src="https://raw.githubusercontent.com/radhikaconstructions07-cpu/Radhika-Constructions-website-/main/Field-survey-team.jpg"
-alt="Field survey work"
->
+<h3>
+Chanderi Project
+</h3>
+
+<p>
+Detailed project presentation
+</p>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="presentation-card"
+onclick="openPresentation(1)">
 
-<img
-src="surveying-field.jpg"
-alt="Surveying work"
->
+<div class="presentation-number">
+PROJECT 02
+</div>
+
+<h3>
+Project Portfolio
+</h3>
+
+<p>
+Radhika Constructions portfolio
+</p>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="presentation-card"
+onclick="openPresentation(2)">
 
-<img
-src="drone-mapping.jpg"
-alt="Drone mapping work"
->
+<div class="presentation-number">
+PROJECT 03
+</div>
+
+<h3>
+Grey Water Management
+</h3>
+
+<p>
+Grey water management project
+</p>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="presentation-card"
+onclick="openPresentation(3)">
 
-<img
-src="map.jpg"
-alt="Mapping work"
->
+<div class="presentation-number">
+PROJECT 04
+</div>
+
+<h3>
+Roadside Plantation
+</h3>
+
+<p>
+Line plantation project
+</p>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="presentation-card"
+onclick="openPresentation(4)">
 
-<img
-src="road-map.jpg"
-alt="Road mapping work"
->
+<div class="presentation-number">
+PROJECT 05
+</div>
+
+<h3>
+Irrigation
+</h3>
+
+<p>
+Irrigation canal project
+</p>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="presentation-card"
+onclick="openPresentation(5)">
 
-<img
-src="landuse-map.jpg"
-alt="Land use mapping"
->
+<div class="presentation-number">
+PROJECT 06
+</div>
+
+<h3>
+Drainage Project
+</h3>
+
+<p>
+Complete drainage project
+</p>
 
 </div>
 
 
-<div class="gallery-item">
+</div>
 
-<img
-src="residential-design.jpg"
-alt="Residential design"
->
+
+<!-- PDF VIEWER -->
+
+<div class="pdf-viewer">
+
+<div class="viewer-top">
+
+<div class="viewer-title">
+
+<h3 id="pdfTitle">
+Chanderi Project
+</h3>
+
+<p id="pdfDescription">
+Detailed project presentation
+</p>
+
+</div>
+
+<div class="page-info" id="pageInfo">
+Page 1
+</div>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="pdf-stage" id="pdfStage">
 
-<img
-src="stp-proposal.jpg"
-alt="Planning work"
->
+<div class="pdf-loading" id="pdfLoading">
+Loading presentation...
+</div>
+
+<canvas id="pdfCanvas"></canvas>
 
 </div>
 
 
-<div class="gallery-item">
+<div class="viewer-controls">
 
-<img
-src="green-building.jpg"
-alt="Building work"
+<button
+class="viewer-btn"
+id="prevProject"
+onclick="previousProject()"
 >
+← Previous Project
+</button>
+
+<button
+class="viewer-btn"
+id="prevPage"
+onclick="previousPage()"
+>
+← Previous Page
+</button>
+
+<button
+class="viewer-btn"
+id="nextPage"
+onclick="nextPage()"
+>
+Next Page →
+</button>
+
+<button
+class="viewer-btn"
+id="nextProject"
+onclick="nextProject()"
+>
+Next Project →
+</button>
 
 </div>
-
-
-<div class="gallery-item">
-
-<img
-src="temple-site.jpg"
-alt="Site planning work"
->
-
-</div>
-
 
 </div>
 
 </div>
 
 </section>
-
-
-
 <!-- ================= TECHNOLOGY ================= -->
 
 <section class="tech" id="technology">
 
 <div class="section">
 
-
 <div class="section-label">
 Technology
 </div>
-
 
 <h2 class="section-title">
 Modern Tools.<br>
 Accurate Results.
 </h2>
 
-
 <p class="section-intro">
-Technology-supported surveying and mapping helps improve accuracy, documentation and planning.
+Technology-supported surveying and mapping helps improve accuracy,
+documentation and planning.
 </p>
-
 
 
 <div class="tech-grid">
@@ -1429,11 +1583,11 @@ RTK Surveying
 </h3>
 
 <p>
-High-precision positioning for field surveying and measurement requirements.
+High-precision positioning for field surveying and measurement
+requirements.
 </p>
 
 </div>
-
 
 
 <div class="tech-card">
@@ -1447,11 +1601,11 @@ Drone Mapping
 </h3>
 
 <p>
-Aerial data collection and mapping for site analysis and documentation.
+Aerial data collection and mapping for site analysis and
+documentation.
 </p>
 
 </div>
-
 
 
 <div class="tech-card">
@@ -1465,11 +1619,11 @@ Digital Mapping
 </h3>
 
 <p>
-Digital maps and site information for planning and project requirements.
+Digital maps and site information for planning and project
+requirements.
 </p>
 
 </div>
-
 
 
 <div class="tech-card">
@@ -1483,7 +1637,8 @@ Site Planning
 </h3>
 
 <p>
-Practical planning support based on field measurements and site conditions.
+Practical planning support based on field measurements and site
+conditions.
 </p>
 
 </div>
@@ -1496,7 +1651,6 @@ Practical planning support based on field measurements and site conditions.
 </section>
 
 
-
 <!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
@@ -1506,20 +1660,18 @@ Practical planning support based on field measurements and site conditions.
 
 <div>
 
-
 <div class="section-label">
 Get in Touch
 </div>
-
 
 <h2 class="section-title">
 Let's discuss<br>
 your project.
 </h2>
 
-
 <p class="contact-text">
-For surveying, mapping, planning, construction consultancy or civil engineering requirements, get in touch with us.
+For surveying, mapping, planning, construction consultancy or civil
+engineering requirements, get in touch with us.
 </p>
 
 
@@ -1556,7 +1708,6 @@ Email
 </div>
 
 
-
 <div class="contact-info">
 
 
@@ -1579,7 +1730,6 @@ Civil Engineer, Planner & Consultant
 </p>
 
 </div>
-
 
 
 <div class="info-box">
@@ -1605,7 +1755,6 @@ Phone
 </div>
 
 
-
 <div class="info-box">
 
 <small>
@@ -1623,7 +1772,6 @@ radhikaconstructions07@gmail.com
 </div>
 
 
-
 <div class="info-box">
 
 <small>
@@ -1631,11 +1779,11 @@ Office
 </small>
 
 <p>
-5/96, Damoh Road, Pandit Deen Dayal Chowk, Vijay Nagar, Jabalpur, Madhya Pradesh – 482001
+5/96, Damoh Road, Pandit Deen Dayal Chowk,
+Vijay Nagar, Jabalpur, Madhya Pradesh – 482001
 </p>
 
 </div>
-
 
 
 <div class="info-box">
@@ -1649,7 +1797,6 @@ GSTIN
 </p>
 
 </div>
-
 
 
 <div class="info-box">
@@ -1679,7 +1826,6 @@ View Office Location on Google Maps →
 </section>
 
 
-
 <!-- ================= LEGAL ================= -->
 
 <div class="legal">
@@ -1690,19 +1836,19 @@ View Office Location on Google Maps →
 Terms & Conditions:
 </strong>
 
-Services are subject to mutually agreed scope, site conditions and applicable regulations.
+Services are subject to mutually agreed scope,
+site conditions and applicable regulations.
 
 </p>
 
-
 <p style="margin-top:7px;">
 
-Any approval, registration or statutory compliance shall be subject to the applicable authority and project requirements.
+Any approval, registration or statutory compliance shall be subject
+to the applicable authority and project requirements.
 
 </p>
 
 </div>
-
 
 
 <!-- ================= FOOTER ================= -->
@@ -1716,10 +1862,17 @@ All Rights Reserved.
 </footer>
 
 
+<!-- ================= PDF.JS ================= -->
 
-<!-- ================= JAVASCRIPT ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
 <script>
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+
+/* ================= MOBILE MENU ================= */
 
 function toggleMenu(){
 
@@ -1747,9 +1900,469 @@ document
 });
 
 
+/* ================= PROJECT DATA ================= */
+
+const presentations = [
+
+    {
+        title:"Chanderi Project",
+        description:"Detailed project presentation",
+        path:"presentations/chanderi-project/chanderiii .pdf"
+    },
+
+    {
+        title:"Project Portfolio",
+        description:"Radhika Constructions premium portfolio",
+        path:"presentations/project-portfolio/Radhika_Constructions_Premium_Detailed_Overview.pptx.pdf"
+    },
+
+    {
+        title:"Grey Water Management",
+        description:"Grey water management project",
+        path:"presentations/grey-water-management/Greywater_management.pdf"
+    },
+
+    {
+        title:"Roadside Plantation",
+        description:"Line plantation project",
+        path:"presentations/roadside-plantation/Line_Plantation.pdf"
+    },
+
+    {
+        title:"Irrigation",
+        description:"Irrigation canal project",
+        path:"presentations/irrigation/irrigation-canal.pdf"
+    },
+
+    {
+        title:"Drainage Project",
+        description:"Complete drainage project",
+        path:"presentations/drainage-project/Complete_Drainage_Project_Premium_Professional_10_Page_Canva.pptx.pdf"
+    }
+
+];
+
+
+let currentProject = 0;
+
+let currentPage = 1;
+
+let currentPDF = null;
+
+
+/* ================= PDF ELEMENTS ================= */
+
+const canvas =
+document.getElementById("pdfCanvas");
+
+const context =
+canvas.getContext("2d");
+
+const loading =
+document.getElementById("pdfLoading");
+
+const title =
+document.getElementById("pdfTitle");
+
+const description =
+document.getElementById("pdfDescription");
+
+const pageInfo =
+document.getElementById("pageInfo");
+
+const previousPageButton =
+document.getElementById("prevPage");
+
+const nextPageButton =
+document.getElementById("nextPage");
+
+const previousProjectButton =
+document.getElementById("prevProject");
+
+const nextProjectButton =
+document.getElementById("nextProject");
+
+
+/* ================= OPEN PROJECT ================= */
+
+function openPresentation(index){
+
+    currentProject = index;
+
+    currentPage = 1;
+
+    updatePresentationCards();
+
+    loadPDF();
+
+}
+
+
+/* ================= LOAD PDF ================= */
+
+async function loadPDF(){
+
+    const project =
+    presentations[currentProject];
+
+
+    title.textContent =
+    project.title;
+
+
+    description.textContent =
+    project.description;
+
+
+    canvas.style.display =
+    "none";
+
+
+    loading.style.display =
+    "block";
+
+
+    loading.textContent =
+    "Loading presentation...";
+
+
+    pageInfo.textContent =
+    "Loading...";
+
+
+    previousPageButton.disabled =
+    true;
+
+
+    nextPageButton.disabled =
+    true;
+
+
+    try{
+
+        /*
+        encodeURI automatically converts
+        spaces in filenames to %20.
+        */
+
+        const pdfURL =
+        encodeURI(project.path);
+
+
+        currentPDF =
+        await pdfjsLib
+        .getDocument(pdfURL)
+        .promise;
+
+
+        pageInfo.textContent =
+        "Page 1 of " +
+        currentPDF.numPages;
+
+
+        await renderPage(currentPage);
+
+
+        updateButtons();
+
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+
+        loading.textContent =
+        "Unable to load this presentation. Please check the PDF filename and GitHub path.";
+
+        pageInfo.textContent =
+        "PDF Error";
+
+    }
+
+}
+
+
+/* ================= RENDER PDF PAGE ================= */
+
+async function renderPage(pageNumber){
+
+    if(!currentPDF){
+        return;
+    }
+
+
+    loading.style.display =
+    "block";
+
+
+    loading.textContent =
+    "Rendering page...";
+
+
+    canvas.style.display =
+    "none";
+
+
+    const page =
+    await currentPDF
+    .getPage(pageNumber);
+
+
+    const viewer =
+    document.getElementById("pdfStage");
+
+
+    const availableWidth =
+    Math.min(
+        viewer.clientWidth - 30,
+        1050
+    );
+
+
+    const originalViewport =
+    page.getViewport({
+        scale:1
+    });
+
+
+    const scale =
+    availableWidth /
+    originalViewport.width;
+
+
+    const viewport =
+    page.getViewport({
+        scale:scale
+    });
+
+
+    canvas.width =
+    viewport.width;
+
+
+    canvas.height =
+    viewport.height;
+
+
+    await page.render({
+
+        canvasContext:context,
+
+        viewport:viewport
+
+    }).promise;
+
+
+    canvas.style.display =
+    "block";
+
+
+    loading.style.display =
+    "none";
+
+
+    pageInfo.textContent =
+    "Page " +
+    currentPage +
+    " of " +
+    currentPDF.numPages;
+
+
+    updateButtons();
+
+}
+
+
+/* ================= NEXT PAGE ================= */
+
+function nextPage(){
+
+    if(
+        !currentPDF ||
+        currentPage >= currentPDF.numPages
+    ){
+        return;
+    }
+
+
+    currentPage++;
+
+    renderPage(currentPage);
+
+}
+
+
+/* ================= PREVIOUS PAGE ================= */
+
+function previousPage(){
+
+    if(
+        !currentPDF ||
+        currentPage <= 1
+    ){
+        return;
+    }
+
+
+    currentPage--;
+
+    renderPage(currentPage);
+
+}
+
+
+/* ================= NEXT PROJECT ================= */
+
+function nextProject(){
+
+    if(
+        currentProject >=
+        presentations.length - 1
+    ){
+
+        return;
+
+    }
+
+
+    currentProject++;
+
+    currentPage = 1;
+
+    updatePresentationCards();
+
+    loadPDF();
+
+}
+
+
+/* ================= PREVIOUS PROJECT ================= */
+
+function previousProject(){
+
+    if(
+        currentProject <= 0
+    ){
+
+        return;
+
+    }
+
+
+    currentProject--;
+
+    currentPage = 1;
+
+    updatePresentationCards();
+
+    loadPDF();
+
+}
+
+
+/* ================= BUTTON STATE ================= */
+
+function updateButtons(){
+
+    if(!currentPDF){
+        return;
+    }
+
+
+    previousPageButton.disabled =
+    currentPage <= 1;
+
+
+    nextPageButton.disabled =
+    currentPage >= currentPDF.numPages;
+
+
+    previousProjectButton.disabled =
+    currentProject <= 0;
+
+
+    nextProjectButton.disabled =
+    currentProject >=
+    presentations.length - 1;
+
+}
+
+
+/* ================= PROJECT CARD ACTIVE STATE ================= */
+
+function updatePresentationCards(){
+
+    const cards =
+    document.querySelectorAll(
+        ".presentation-card"
+    );
+
+
+    cards.forEach(function(card,index){
+
+        card.classList.toggle(
+            "active",
+            index === currentProject
+        );
+
+    });
+
+}
+
+
+/* ================= WINDOW RESIZE ================= */
+
+let resizeTimer;
+
+window.addEventListener(
+    "resize",
+    function(){
+
+        clearTimeout(resizeTimer);
+
+
+        resizeTimer =
+        setTimeout(
+            function(){
+
+                if(currentPDF){
+
+                    renderPage(
+                        currentPage
+                    );
+
+                }
+
+            },
+            250
+        );
+
+    }
+);
+
+
+/* ================= CURRENT YEAR ================= */
+
 document
 .getElementById("year")
-.textContent = new Date().getFullYear();
+.textContent =
+new Date().getFullYear();
+
+
+/* ================= START FIRST PDF ================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        updatePresentationCards();
+
+        loadPDF();
+
+    }
+);
 
 </script>
 
