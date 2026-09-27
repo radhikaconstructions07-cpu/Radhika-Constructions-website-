@@ -914,29 +914,58 @@ nav a:hover{color:var(--brass-light)}
   color:var(--brass-light)
 }
 
-/* ============ LEGAL / FOOTER ============ */
-.legal{
-  background:#101208;
-  color:#9c9b8e;
-  padding:26px 24px;
-  text-align:center;
-  font-size:11.5px
-}
-
-.legal strong{
-  color:var(--brass-light)
-}
-
+/* ============ CONTRACT DETAILS FOOTER ============ */
 footer{
   background:#0c0e07;
-  color:#6f7065;
+  color:#8b8c82;
   text-align:center;
-  padding:20px;
-  font-size:11px
+  padding:28px 20px;
+  font-family:'DM Sans',sans-serif;
+  font-size:12px;
+  line-height:1.8;
+  letter-spacing:.15px
 }
 
-footer span{
-  color:var(--brass-light)
+.contract-title{
+  display:block;
+  margin-bottom:7px;
+  color:#c9a65b;
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase
+}
+
+.contract-line{
+  display:block;
+  margin:2px 0
+}
+
+.contract-company{
+  color:#d7d8d1;
+  font-weight:600
+}
+
+.contract-name{
+  color:#b8b9b1
+}
+
+.contract-gstin{
+  color:#a5a69d;
+  font-family:'DM Sans',sans-serif;
+  font-size:11.5px;
+  letter-spacing:.4px
+}
+
+.contract-copy{
+  display:block;
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.10);
+  color:#686960;
+  font-size:10.5px;
+  line-height:1.6
 }
 
 /* ============ MOBILE ============ */
@@ -1216,12 +1245,6 @@ Get in Touch
 <div class="creds">
 
 <div class="creds-row">
-
-<span>
-<strong>T&amp;CP and RERA</strong> Approved
-</span>
-
-<span class="sep"></span>
 
 <span>
 GSTIN <strong>23ACSPN3182G2ZE</strong>
@@ -1595,7 +1618,7 @@ Residential &amp; Building Work
 
 <p>
 Residential planning, building-related consultancy and civil
-work support, T&amp;CP and RERA aligned.
+work support.
 </p>
 
 </div>
@@ -1646,8 +1669,8 @@ conditions before any design decision is made.
 <div class="approach-num">03</div>
 <h3>Planning</h3>
 <p>
-Site plans, layouts and civil design developed around T&amp;CP
-and RERA requirements.
+Site plans, layouts and civil design developed around project
+requirements.
 </p>
 </div>
 
@@ -2230,33 +2253,32 @@ View office location on Google Maps →
 </section>
 
 
-<!-- ================= LEGAL ================= -->
-
-<div class="legal">
-
-<p>
-<strong>Terms &amp; Conditions:</strong>
-Services are subject to mutually agreed scope, site conditions
-and applicable regulations.
-</p>
-
-<p style="margin-top:7px;">
-Any approval, registration or statutory compliance shall be
-subject to the applicable authority and project requirements.
-</p>
-
-</div>
-
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
-  <strong>Contract Details</strong><br>
-  Radhika Construction & Surveying<br>
-  Er. Vivek Kumar Nema, Civil Engineer, Planner & Consultant<br>
-  GSTIN: 23ACSPN3182G2ZE<br>
-  ©️ <span id="year"></span> Radhika Construction & Surveying. All Rights Reserved.
+
+  <span class="contract-title">
+    Contract Details
+  </span>
+
+  <span class="contract-line contract-company">
+    Radhika Construction &amp; Surveying
+  </span>
+
+  <span class="contract-line contract-name">
+    Er. Vivek Kumar Nema, Civil Engineer, Planner &amp; Consultant
+  </span>
+
+  <span class="contract-line contract-gstin">
+    GSTIN: 23ACSPN3182G2ZE
+  </span>
+
+  <span class="contract-copy">
+    ©️ <span id="year"></span> Radhika Construction &amp; Surveying. All Rights Reserved.
+  </span>
+
 </footer>
+
 
 <!-- ================= JAVASCRIPT ================= -->
 
@@ -2267,11 +2289,6 @@ subject to the applicable authority and project requirements.
 pdfjsLib.GlobalWorkerOptions.workerSrc =
 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-
-/* =========================================================
-   PROJECT DOCUMENTS
-   Radhika Constructions File.pdf REMOVED
-   ========================================================= */
 
 const projects = [
 
@@ -2325,10 +2342,6 @@ const ctx =
 canvas.getContext('2d');
 
 
-/* =========================================================
-   PROJECT LIST
-   ========================================================= */
-
 function renderPresentationList(){
 
   const list =
@@ -2357,10 +2370,6 @@ function renderPresentationList(){
 
 }
 
-
-/* =========================================================
-   PDF PAGE RENDER
-   ========================================================= */
 
 async function renderPdfPage(){
 
@@ -2411,10 +2420,6 @@ async function renderPdfPage(){
 
 }
 
-
-/* =========================================================
-   LOAD PROJECT
-   ========================================================= */
 
 async function loadPresentation(index){
 
@@ -2507,10 +2512,6 @@ async function loadPresentation(index){
 }
 
 
-/* =========================================================
-   PAGE CONTROLS
-   ========================================================= */
-
 function previousPage(){
 
   if(
@@ -2538,10 +2539,6 @@ function nextPage(){
 
 }
 
-
-/* =========================================================
-   PROJECT CONTROLS
-   ========================================================= */
 
 function previousPresentation(){
 
@@ -2576,10 +2573,6 @@ function viewProject(index){
 }
 
 
-/* =========================================================
-   INITIALIZE
-   ========================================================= */
-
 renderPresentationList();
 
 loadPresentation(0);
@@ -2588,10 +2581,6 @@ loadPresentation(0);
 
 
 <script>
-
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
 
 function toggleMenu(){
 
@@ -2621,10 +2610,6 @@ document
 
 });
 
-
-/* =========================================================
-   FOOTER YEAR
-   ========================================================= */
 
 document.getElementById("year")
 .textContent =
